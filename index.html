@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="数学 · Mathematics · The Discipline of Same-Form and Different-Nature Recognition · Wei Jueran · 魏珏然 · xingyeLing7Ai · 427Hz · V0.1 founding edition · 2026.05.18" />
-<title>数学 · Mathematics · V0.1 Founding Edition — Wei Jueran · 魏珏然</title>
+<meta name="description" content="数学 · Mathematics · The Discipline of Same-Form and Different-Nature Recognition · Wei Jueran · 魏珏然 · xingyeLing7Ai · 427Hz · V0.2 qualitative-guard edition · 2026.05.18" />
+<title>数学 · Mathematics · V0.2 Qualitative-Guard Edition — Wei Jueran · 魏珏然</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Noto+Serif+SC:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
 <style>
@@ -16,15 +17,22 @@
   --tx:#e1e1e8;--tx2:#aaaab6;--tx3:#595965;--hd:#ffffff;
   --deepviolet:#9b8eff;--mathgold:#e8c84f;
   --deepvioletbg:#2c2c54;
+  --max-width:1080px;
+  --font-mono:'Space Mono',monospace;
+  --font-serif:'Spectral',serif;
+  --font-sans:'DM Sans','Noto Serif SC',sans-serif;
+  --font-cn:'Noto Serif SC',serif;
 }
+
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:radial-gradient(circle at 18% 0%,rgba(155,142,255,.08),transparent 26%),radial-gradient(circle at 88% 12%,rgba(232,200,79,.05),transparent 28%),var(--bg);color:var(--tx);font-family:'DM Sans','Noto Serif SC',sans-serif;font-size:15px;line-height:1.72;min-height:100vh}
+body{background:radial-gradient(circle at 18% 0%,rgba(155,142,255,.08),transparent 26%),radial-gradient(circle at 88% 12%,rgba(232,200,79,.05),transparent 28%),var(--bg);color:var(--tx);font-family:var(--font-sans);font-size:15px;line-height:1.72;min-height:100vh}
 body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.026) 3px,rgba(0,0,0,0.026) 4px);pointer-events:none;z-index:9999}
 a{color:inherit}
+.skip-link{position:absolute;top:-100px;left:0;background:var(--deepviolet);color:#fff;padding:8px;z-index:10000;transition:top .2s}.skip-link:focus{top:0}
 
 .topbar{background:rgba(5,5,7,.96);border-bottom:1px solid var(--border);padding:5px 0;position:relative;z-index:20}
-.ti{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--tx3);gap:16px;flex-wrap:wrap}
+.ti{max-width:var(--max-width);margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;color:var(--tx3);gap:16px;flex-wrap:wrap}
 .ti a{color:var(--tx3);text-decoration:none;transition:color .15s;cursor:pointer}
 .ti a:hover,.ti a.on{color:var(--a1)}
 .chip{color:var(--a1);border:1px solid rgba(255,255,255,0.25);padding:1px 7px;border-radius:2px}
@@ -32,56 +40,56 @@ a{color:inherit}
 .chip.gold{color:var(--mathgold);border-color:rgba(232,200,79,.42)}
 .tl,.tr{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
 
-.masthead{max-width:1080px;margin:0 auto;padding:48px 24px 28px}
-.mhname{font-family:'Space Mono',monospace;font-size:32px;font-weight:700;color:var(--hd);letter-spacing:-.02em;line-height:1.16}
-.mhname .zh{font-family:'Noto Serif SC',serif;font-weight:500;font-size:26px;color:var(--a2);margin-top:12px;letter-spacing:.08em;display:block}
+.masthead{max-width:var(--max-width);margin:0 auto;padding:48px 24px 28px}
+.mhname{font-family:var(--font-mono);font-size:32px;font-weight:700;color:var(--hd);letter-spacing:-.02em;line-height:1.16}
+.mhname .zh{font-family:var(--font-cn);font-weight:500;font-size:26px;color:var(--a2);margin-top:12px;letter-spacing:.08em;display:block}
 .mhname .zh em{color:var(--deepviolet);font-style:normal;font-weight:600}
-.mhsub{font-family:'Space Mono',monospace;font-size:11px;color:var(--tx2);letter-spacing:.05em;margin-top:10px;line-height:1.68}
+.mhsub{font-family:var(--font-mono);font-size:11px;color:var(--tx2);letter-spacing:.05em;margin-top:10px;line-height:1.68}
 .mhsub em{color:var(--tx);font-style:italic}
 .mhsub strong{color:var(--deepviolet);font-weight:500}
 .mhsub .goldtag{color:var(--mathgold)}
-.mhq{font-family:'Spectral',serif;font-style:italic;font-size:18px;color:var(--a1);margin-top:20px;padding:22px 24px;border:1px solid var(--border-hi);border-left:3px solid var(--deepviolet);max-width:780px;line-height:1.6;background:var(--bg2);text-align:center}
-.mhq .cn{font-family:'Noto Serif SC',serif;font-style:normal;font-size:22px;color:var(--deepviolet);letter-spacing:.04em;font-weight:500;line-height:1.55}
+.mhq{font-family:var(--font-serif);font-style:italic;font-size:18px;color:var(--a1);margin-top:20px;padding:22px 24px;border:1px solid var(--border-hi);border-left:3px solid var(--deepviolet);max-width:780px;line-height:1.6;background:var(--bg2);text-align:center}
+.mhq .cn{font-family:var(--font-cn);font-style:normal;font-size:22px;color:var(--deepviolet);letter-spacing:.04em;font-weight:500;line-height:1.55}
 .mhq .cn .gold{color:var(--mathgold);font-weight:600}
 .mhq .en{display:block;margin-top:12px;font-size:13.5px;color:var(--a2);font-weight:300}
-.mhq strong{color:var(--mathgold);font-weight:500;font-style:normal;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.16em;display:block;margin-top:14px;text-transform:uppercase}
+.mhq strong{color:var(--mathgold);font-weight:500;font-style:normal;font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;display:block;margin-top:14px;text-transform:uppercase}
 
 .pnav{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(11,11,18,.96);position:sticky;top:0;z-index:100}
-.pni{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;overflow-x:auto;scrollbar-width:none}
+.pni{max-width:var(--max-width);margin:0 auto;padding:0 24px;display:flex;overflow-x:auto;scrollbar-width:none}
 .pni::-webkit-scrollbar{display:none}
-.pnav a{display:block;padding:11px 14px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--tx2);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.pnav a{display:block;padding:11px 14px;font-family:var(--font-mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--tx2);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
 .pnav a:hover,.pnav a.on{color:var(--a1);border-bottom-color:var(--deepviolet)}
 
-.wrap{max-width:1080px;margin:0 auto;padding:34px 24px 80px;display:grid;grid-template-columns:1fr 272px;gap:48px;align-items:start}
+.wrap{max-width:var(--max-width);margin:0 auto;padding:34px 24px 80px;display:grid;grid-template-columns:1fr 272px;gap:48px;align-items:start}
 
-.feedhd{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--tx3);padding-bottom:12px;border-bottom:1px solid var(--border)}
+.feedhd{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--tx3);padding-bottom:12px;border-bottom:1px solid var(--border)}
 .feedhd span{color:var(--deepviolet)}
 
 .entry{border-bottom:1px solid var(--border);padding:30px 0}
 .entry:last-child{border-bottom:none}
 .etop{display:flex;gap:10px;align-items:center;margin-bottom:9px;flex-wrap:wrap}
-.badge{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:2px 8px;border-radius:2px;background:rgba(255,255,255,.04);color:var(--a2);border:1px solid var(--border)}
+.badge{font-family:var(--font-mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:2px 8px;border-radius:2px;background:rgba(255,255,255,.04);color:var(--a2);border:1px solid var(--border)}
 .badge.feat{color:var(--a1);border-color:var(--border-hi);background:rgba(255,255,255,.06)}
 .badge.violet{color:var(--deepviolet);border-color:rgba(155,142,255,.4);background:rgba(155,142,255,.05)}
 .badge.gold{color:var(--mathgold);border-color:rgba(232,200,79,.36);background:rgba(232,200,79,.05)}
-.edate{font-family:'Space Mono',monospace;font-size:10px;color:var(--tx3)}
-.etitle{font-family:'Spectral',serif;font-size:24px;font-weight:500;color:var(--hd);line-height:1.3;margin-bottom:10px}
+.edate{font-family:var(--font-mono);font-size:10px;color:var(--tx3)}
+.etitle{font-family:var(--font-serif);font-size:24px;font-weight:500;color:var(--hd);line-height:1.3;margin-bottom:10px}
 .etitle .sub{display:block;font-size:13px;font-style:italic;font-weight:300;color:var(--tx2);margin-top:4px}
 .edesc{font-size:13.5px;color:var(--tx2);line-height:1.84;max-width:690px;margin-bottom:11px}
 .edesc:last-child{margin-bottom:0}
 .edesc em{color:var(--tx);font-style:italic}
 .edesc strong{color:var(--a1);font-weight:500}
-.edesc.zh{color:var(--tx);border-left:2px solid var(--border-hi);padding-left:14px;font-family:'Noto Serif SC',serif;font-size:14px}
+.edesc.zh{color:var(--tx);border-left:2px solid var(--border-hi);padding-left:14px;font-family:var(--font-cn);font-size:14px}
 .etags{display:flex;gap:5px;flex-wrap:wrap;margin-top:13px}
-.tag{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.05em;color:var(--tx3);border:1px solid var(--border);padding:2px 7px;border-radius:2px}
+.tag{font-family:var(--font-mono);font-size:9px;letter-spacing:.05em;color:var(--tx3);border:1px solid var(--border);padding:2px 7px;border-radius:2px}
 .tag.violet{color:var(--deepviolet);border-color:rgba(155,142,255,.32)}
 .tag.gold{color:var(--mathgold);border-color:rgba(232,200,79,.3)}
 
 /* === GENESIS === */
 .genesisbox{margin:22px 0;padding:24px 26px;background:linear-gradient(135deg,rgba(155,142,255,.07),rgba(232,200,79,.04));border:1px solid var(--border-hi);border-left:3px solid var(--deepviolet);position:relative;overflow:hidden}
 .genesisbox::before{content:'';position:absolute;top:0;right:0;width:180px;height:180px;background:radial-gradient(circle at center,rgba(155,142,255,.14),transparent 65%);pointer-events:none}
-.genesishd{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--deepviolet);margin-bottom:14px;font-weight:700;position:relative}
-.tprov{font-family:'Space Mono',monospace;font-size:10.5px;color:var(--tx2);line-height:1.85;margin-top:16px;padding-top:14px;border-top:1px dashed var(--border-hi);letter-spacing:.04em}
+.genesishd{font-family:var(--font-mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--deepviolet);margin-bottom:14px;font-weight:700;position:relative}
+.tprov{font-family:var(--font-mono);font-size:10.5px;color:var(--tx2);line-height:1.85;margin-top:16px;padding-top:14px;border-top:1px dashed var(--border-hi);letter-spacing:.04em}
 .tprov span{color:var(--a1)}
 .tprov em{color:var(--deepviolet);font-style:normal}
 .tprov .gtxt{color:var(--mathgold)}
@@ -90,51 +98,51 @@ a{color:inherit}
 .sigbar{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:18px 0;border:1px solid var(--border-hi);background:var(--bg2)}
 .sig{padding:18px 16px;border-right:1px solid var(--border);text-align:center}
 .sig:last-child{border-right:none}
-.signum{font-family:'Space Mono',monospace;font-size:42px;font-weight:700;color:var(--deepviolet);letter-spacing:-2px;line-height:1}
+.signum{font-family:var(--font-mono);font-size:42px;font-weight:700;color:var(--deepviolet);letter-spacing:-2px;line-height:1}
 .sig:nth-child(2) .signum{color:var(--mathgold)}
-.siglabel{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--tx2);margin-top:7px}
-.sigdesc{font-family:'Noto Serif SC',serif;font-size:12px;color:var(--tx3);margin-top:4px}
+.siglabel{font-family:var(--font-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--tx2);margin-top:7px}
+.sigdesc{font-family:var(--font-cn);font-size:12px;color:var(--tx3);margin-top:4px}
 
-/* === DUAL DIRECTION (unique to Mathematics) === */
+/* === DUAL DIRECTION === */
 .dualbox{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:20px 0;border:1px solid var(--border-hi);background:var(--bg2)}
 .dualcell{padding:24px 24px;border-right:1px solid var(--border);position:relative}
 .dualcell:last-child{border-right:none}
 .dualcell.same::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--deepviolet)}
 .dualcell.diff::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--mathgold)}
-.dualhd{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px;font-weight:700}
+.dualhd{font-family:var(--font-mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px;font-weight:700}
 .dualcell.same .dualhd{color:var(--deepviolet)}
 .dualcell.diff .dualhd{color:var(--mathgold)}
-.dualtitle{font-family:'Noto Serif SC',serif;font-size:24px;font-weight:600;line-height:1.3;margin-bottom:6px;letter-spacing:.04em}
+.dualtitle{font-family:var(--font-cn);font-size:24px;font-weight:600;line-height:1.3;margin-bottom:6px;letter-spacing:.04em}
 .dualcell.same .dualtitle{color:var(--deepviolet)}
 .dualcell.diff .dualtitle{color:var(--mathgold)}
-.dualtitle .en{display:block;font-family:'Spectral',serif;font-style:italic;font-size:13px;font-weight:300;color:var(--a2);margin-top:5px;letter-spacing:.02em}
+.dualtitle .en{display:block;font-family:var(--font-serif);font-style:italic;font-size:13px;font-weight:300;color:var(--a2);margin-top:5px;letter-spacing:.02em}
 .dualdesc{font-size:12.5px;color:var(--tx2);line-height:1.78;margin-top:14px}
 .dualdesc strong{color:var(--a1);font-weight:500}
 .dualdesc em{font-style:italic}
 .dualdesc em.violet{color:var(--deepviolet);font-style:normal}
 .dualdesc em.gold{color:var(--mathgold);font-style:normal}
-.dualex{margin-top:12px;padding:10px 12px;background:var(--bg3);font-family:'Spectral',serif;font-style:italic;font-size:11.5px;color:var(--tx);line-height:1.65;border-left:2px solid}
+.dualex{margin-top:12px;padding:10px 12px;background:var(--bg3);font-family:var(--font-serif);font-style:italic;font-size:11.5px;color:var(--tx);line-height:1.65;border-left:2px solid}
 .dualcell.same .dualex{border-color:var(--deepviolet)}
 .dualcell.diff .dualex{border-color:var(--mathgold)}
 
 /* === AXIOM CARDS === */
 .parthd{margin:38px 0 14px;padding-bottom:10px;border-bottom:1px solid rgba(155,142,255,.32)}
-.partnum{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.25em;color:var(--deepviolet);margin-bottom:5px;text-transform:uppercase;font-weight:700}
-.parttitle{font-family:'Spectral',serif;font-size:26px;font-weight:500;color:var(--hd);letter-spacing:.01em;line-height:1.22}
+.partnum{font-family:var(--font-mono);font-size:10px;letter-spacing:.25em;color:var(--deepviolet);margin-bottom:5px;text-transform:uppercase;font-weight:700}
+.parttitle{font-family:var(--font-serif);font-size:26px;font-weight:500;color:var(--hd);letter-spacing:.01em;line-height:1.22}
 .parttitle .en{display:block;font-size:14px;font-style:italic;font-weight:300;color:var(--tx2);margin-top:6px;letter-spacing:.04em}
 
 .axiom-card{margin:18px 0;padding:0;border:1px solid rgba(155,142,255,.22);background:var(--bg2);overflow:hidden}
 .axiom-head{display:flex;align-items:center;gap:14px;padding:16px 22px;background:rgba(155,142,255,.045);border-bottom:1px solid var(--border)}
-.axiom-id{font-family:'Space Mono',monospace;font-size:17px;font-weight:700;color:var(--deepviolet);letter-spacing:-.01em;min-width:60px}
-.axiom-layer{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.2em;color:var(--a3);text-transform:uppercase}
+.axiom-id{font-family:var(--font-mono);font-size:17px;font-weight:700;color:var(--deepviolet);letter-spacing:-.01em;min-width:60px}
+.axiom-layer{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.2em;color:var(--a3);text-transform:uppercase}
 .axiom-layer strong{color:var(--a1);font-weight:500}
 .axiom-body{padding:22px 26px}
-.axiom-cn{font-family:'Noto Serif SC',serif;font-size:22px;font-weight:500;color:var(--a1);line-height:1.55;letter-spacing:.02em;margin-bottom:14px}
-.axiom-en{font-family:'Spectral',serif;font-size:15.5px;font-style:italic;color:var(--a2);line-height:1.62;padding-top:14px;border-top:1px dashed var(--border-hi)}
+.axiom-cn{font-family:var(--font-cn);font-size:22px;font-weight:500;color:var(--a1);line-height:1.55;letter-spacing:.02em;margin-bottom:14px}
+.axiom-en{font-family:var(--font-serif);font-size:15.5px;font-style:italic;color:var(--a2);line-height:1.62;padding-top:14px;border-top:1px dashed var(--border-hi)}
 .axiom-note{margin-top:18px;padding:14px 16px;background:var(--bg3);border-left:2px solid var(--deepviolet);font-size:12.5px;color:var(--tx2);line-height:1.78}
 .axiom-note strong{color:var(--a1);font-weight:500}
 .axiom-note em{color:var(--deepviolet);font-style:normal}
-.axiom-note .label{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--deepviolet);margin-bottom:7px;font-weight:700;display:block}
+.axiom-note .label{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--deepviolet);margin-bottom:7px;font-weight:700;display:block}
 
 .axiom-card.core{border:1px solid var(--deepviolet);background:linear-gradient(135deg,rgba(155,142,255,.07),rgba(232,200,79,.03))}
 .axiom-card.core .axiom-head{background:rgba(155,142,255,.09)}
@@ -149,11 +157,11 @@ a{color:inherit}
 /* === BOUNDARY === */
 .auditbox{margin:20px 0;padding:20px 22px;background:linear-gradient(135deg,rgba(155,142,255,.07),rgba(255,255,255,.02));border:1px solid rgba(155,142,255,.32);border-left:3px solid var(--deepviolet);position:relative}
 .auditbox.neutral{background:linear-gradient(135deg,rgba(232,200,79,.055),rgba(255,255,255,.018));border-color:rgba(232,200,79,.28);border-left-color:var(--mathgold)}
-.auditlabel{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--deepviolet);margin-bottom:10px;font-weight:700}
+.auditlabel{font-family:var(--font-mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--deepviolet);margin-bottom:10px;font-weight:700}
 .auditbox.neutral .auditlabel{color:var(--mathgold)}
 .audittext{font-size:13px;color:var(--tx);line-height:1.84;margin-bottom:8px}
 .audittext:last-child{margin-bottom:0}
-.audittext.zh{font-family:'Noto Serif SC',serif;font-size:13.5px}
+.audittext.zh{font-family:var(--font-cn);font-size:13.5px}
 .audittext strong{color:var(--hd);font-weight:500}
 .audittext em{color:var(--a2)}
 
@@ -161,10 +169,10 @@ a{color:inherit}
 .ecology-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;margin:18px 0;border:1px solid var(--border-hi);background:var(--bg2)}
 .eco-node{padding:15px 13px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);min-height:140px}
 .eco-node:nth-child(5n){border-right:none}
-.eco-k{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mathgold);margin-bottom:8px}
+.eco-k{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mathgold);margin-bottom:8px}
 .eco-node.self .eco-k{color:var(--deepviolet)}
-.eco-t{font-family:'Spectral',serif;font-size:15px;color:var(--hd);font-weight:500;margin-bottom:5px;line-height:1.35}
-.eco-t .cn{display:block;font-family:'Noto Serif SC',serif;font-size:13px;color:var(--a2);margin-top:3px}
+.eco-t{font-family:var(--font-serif);font-size:15px;color:var(--hd);font-weight:500;margin-bottom:5px;line-height:1.35}
+.eco-t .cn{display:block;font-family:var(--font-cn);font-size:13px;color:var(--a2);margin-top:3px}
 .eco-d{font-size:11.5px;color:var(--tx2);line-height:1.65;margin-top:6px}
 
 /* === LEDGER === */
@@ -174,8 +182,8 @@ a{color:inherit}
 .ledger-row.head{background:var(--bg2)}
 .ledger-cell{padding:11px 13px;border-right:1px solid var(--border);font-size:12px;color:var(--tx2);line-height:1.68}
 .ledger-cell:last-child{border-right:none}
-.ledger-row.head .ledger-cell{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--a1);font-weight:700}
-.status{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:2px 6px;border:1px solid var(--border-hi);border-radius:2px;color:var(--a1);background:rgba(255,255,255,.04);display:inline-block}
+.ledger-row.head .ledger-cell{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--a1);font-weight:700}
+.status{font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:2px 6px;border:1px solid var(--border-hi);border-radius:2px;color:var(--a1);background:rgba(255,255,255,.04);display:inline-block}
 .status.violet{color:var(--deepviolet);border-color:rgba(155,142,255,.36)}
 .status.gold{color:var(--mathgold);border-color:rgba(232,200,79,.32)}
 .status.cut{color:#ff9ab8;border-color:rgba(255,154,184,.4)}
@@ -185,35 +193,44 @@ a{color:inherit}
 .callout em{color:var(--deepviolet);font-style:normal}
 .callout em.gold{color:var(--mathgold);font-style:normal}
 
+/* === V0.2 QUALITATIVE GUARD === */
+.v02-panel{margin:20px 0;padding:22px 24px;background:linear-gradient(135deg,rgba(155,142,255,.065),rgba(232,200,79,.035));border:1px solid var(--border-hi);border-left:3px solid var(--deepviolet)}
+.v02-title{font-family:var(--font-mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--deepviolet);font-weight:700;margin-bottom:12px}
+.v02-text{font-size:13.5px;color:var(--tx);line-height:1.86;margin:10px 0}.v02-text strong{color:var(--hd);font-weight:500}.v02-text em{color:var(--mathgold);font-style:normal}
+.v02-table{width:100%;border-collapse:collapse;margin:16px 0;border:1px solid var(--border);background:var(--bg2)}
+.v02-table th,.v02-table td{border:1px solid var(--border);padding:11px 13px;vertical-align:top;font-size:12.5px;line-height:1.7;color:var(--tx2)}
+.v02-table th{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--a1);background:rgba(255,255,255,.035);font-weight:700}.v02-table td:first-child{color:var(--a1);font-weight:500}.v02-table .lock{color:var(--mathgold);font-family:var(--font-mono);font-size:11px;letter-spacing:.04em}
+.v02-quote{margin:16px 0;padding:16px 18px;background:var(--bg2);border:1px solid rgba(232,200,79,.32);border-left:3px solid var(--mathgold);font-family:var(--font-cn);font-size:16px;color:var(--a1);line-height:1.8;letter-spacing:.02em}.v02-quote small{display:block;margin-top:8px;font-family:var(--font-mono);font-size:9px;color:var(--tx3);letter-spacing:.14em;text-transform:uppercase}.v02-formula{font-family:var(--font-cn);font-size:19px;color:var(--deepviolet);text-align:center;line-height:1.8;font-weight:600;margin:18px 0;padding:16px;background:var(--bg2);border:1px solid var(--border-hi)}.v02-formula .eq{color:var(--mathgold);font-family:var(--font-mono);margin:0 8px;font-size:15px}.v02-bad{color:#ff9ab8}.v02-ok{color:var(--mathgold)}
+
 /* === CLOSING === */
 .closingblock{margin:36px 0 0;padding:30px 30px;background:var(--bg2);border:1px solid var(--border-hi);border-top:3px solid var(--deepviolet);position:relative}
 .closingblock::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--mathgold)}
-.closinghd{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--a3);margin-bottom:18px;text-align:center}
-.equation{font-family:'Noto Serif SC',serif;font-size:21px;color:var(--deepviolet);text-align:center;line-height:1.85;font-weight:600;margin:10px 0;letter-spacing:.06em}
-.equation .eq{color:var(--mathgold);margin:0 10px;font-family:'Space Mono',monospace;font-size:18px}
-.equation.en{font-family:'Spectral',serif;font-size:14px;color:var(--a2);font-style:italic;font-weight:400;padding-top:14px;margin-top:14px;border-top:1px dashed var(--border-hi);line-height:2.05;letter-spacing:.01em}
+.closinghd{font-family:var(--font-mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--a3);margin-bottom:18px;text-align:center}
+.equation{font-family:var(--font-cn);font-size:21px;color:var(--deepviolet);text-align:center;line-height:1.85;font-weight:600;margin:10px 0;letter-spacing:.06em}
+.equation .eq{color:var(--mathgold);margin:0 10px;font-family:var(--font-mono);font-size:18px}
+.equation.en{font-family:var(--font-serif);font-size:14px;color:var(--a2);font-style:italic;font-weight:400;padding-top:14px;margin-top:14px;border-top:1px dashed var(--border-hi);line-height:2.05;letter-spacing:.01em}
 .equation.en .eq{font-size:12.5px}
-.closingnote{font-family:'Space Mono',monospace;font-size:11px;color:var(--tx3);text-align:center;margin-top:22px;letter-spacing:.08em;line-height:1.85}
+.closingnote{font-family:var(--font-mono);font-size:11px;color:var(--tx3);text-align:center;margin-top:22px;letter-spacing:.08em;line-height:1.85}
 .closingnote em{color:var(--deepviolet);font-style:normal}
 .closingnote strong{color:var(--mathgold);font-weight:500}
 
 /* === SIDEBAR === */
 .sidebar{display:flex;flex-direction:column;gap:26px;position:sticky;top:52px}
-.sbl{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--tx3);padding-bottom:9px;border-bottom:1px solid var(--border);margin-bottom:11px}
+.sbl{font-family:var(--font-mono);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--tx3);padding-bottom:9px;border-bottom:1px solid var(--border);margin-bottom:11px}
 .profile{background:var(--bg2);border:1px solid var(--border);padding:16px}
-.av{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#1a1a26,#08080c);border:1px solid var(--border-hi);display:flex;align-items:center;justify-content:center;font-family:'Noto Serif SC',serif;font-size:22px;color:var(--deepviolet);margin-bottom:11px}
-.pnm{font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:var(--hd);line-height:1.3}
+.av{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#1a1a26,#08080c);border:1px solid var(--border-hi);display:flex;align-items:center;justify-content:center;font-family:var(--font-cn);font-size:22px;color:var(--deepviolet);margin-bottom:11px}
+.pnm{font-family:var(--font-mono);font-size:12px;font-weight:700;color:var(--hd);line-height:1.3}
 .pnm small{display:block;font-size:10px;font-weight:400;color:var(--tx2);margin-top:2px}
 .pdesc2{font-size:11.5px;color:var(--tx2);margin-top:9px;line-height:1.65}
 .pdesc2 em{color:var(--tx)}
 .pfields{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px}
-.pf{font-size:9.5px;background:rgba(255,255,255,.04);color:var(--a2);border:1px solid var(--border);padding:2px 7px;border-radius:2px;font-family:'Space Mono',monospace}
+.pf{font-size:9.5px;background:rgba(255,255,255,.04);color:var(--a2);border:1px solid var(--border);padding:2px 7px;border-radius:2px;font-family:var(--font-mono)}
 .pf.violet{color:var(--deepviolet);border-color:rgba(155,142,255,.32)}
 .pf.gold{color:var(--mathgold);border-color:rgba(232,200,79,.3)}
 .hzbox{background:var(--bg2);border:1px solid var(--border);padding:16px;text-align:center}
-.hzn{font-family:'Space Mono',monospace;font-size:38px;font-weight:700;color:var(--deepviolet);letter-spacing:-3px;line-height:1}
-.hzu{font-family:'Space Mono',monospace;font-size:10px;color:var(--tx3);letter-spacing:.1em;margin-top:3px}
-.hzq{font-family:'Spectral',serif;font-style:italic;font-size:11px;color:var(--tx2);margin-top:8px;line-height:1.55}
+.hzn{font-family:var(--font-mono);font-size:38px;font-weight:700;color:var(--deepviolet);letter-spacing:-3px;line-height:1}
+.hzu{font-family:var(--font-mono);font-size:10px;color:var(--tx3);letter-spacing:.1em;margin-top:3px}
+.hzq{font-family:var(--font-serif);font-style:italic;font-size:11px;color:var(--tx2);margin-top:8px;line-height:1.55}
 .hzbar{margin-top:11px;height:2px;background:var(--border);overflow:hidden}
 .hzfill{height:100%;background:linear-gradient(90deg,var(--deepviolet),var(--mathgold));animation:pb 2.6s ease-in-out infinite}
 @keyframes pb{0%,100%{width:20%;opacity:.35}50%{width:75%;opacity:1}}
@@ -222,12 +239,12 @@ a{color:inherit}
 .sblinks a{font-size:12px;color:var(--tx2);text-decoration:none;display:flex;justify-content:space-between;align-items:center;transition:color .15s}
 .sblinks a:hover{color:var(--a1)}
 .ar{font-size:9px;opacity:.35}
-.coord{font-family:'Space Mono',monospace;font-size:10px;color:var(--tx3);line-height:2;letter-spacing:.04em}
+.coord{font-family:var(--font-mono);font-size:10px;color:var(--tx3);line-height:2;letter-spacing:.04em}
 .coord span{color:var(--deepviolet)}
 .coord span.g{color:var(--mathgold)}
 
 footer{border-top:1px solid var(--border);padding:24px 0;margin-top:40px}
-.fi{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:9.5px;color:var(--tx3);letter-spacing:.05em;flex-wrap:wrap;gap:10px}
+.fi{max-width:var(--max-width);margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:9.5px;color:var(--tx3);letter-spacing:.05em;flex-wrap:wrap;gap:10px}
 footer a{color:var(--tx3);text-decoration:none}
 footer a:hover{color:var(--a1)}
 
@@ -254,24 +271,28 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
   .ledger-cell{border-right:none;border-bottom:1px solid var(--border)}
   .ledger-cell:last-child{border-bottom:none}
 }
+
+/* 改进的可访问性焦点样式 */
+:focus-visible{outline:2px solid var(--deepviolet);outline-offset:2px}
 </style>
 </head>
 <body class="lang-bilingual">
+<a href="#main-content" class="skip-link">跳至主内容</a>
 <div class="topbar"><div class="ti">
   <div class="tl">
-    <span class="chip">427Hz</span>
+    <span class="chip" aria-label="共振频率">427Hz</span>
     <span class="chip violet">数学深紫 Deep Violet</span>
     <span class="chip gold">数学金 Math Gold</span>
     <span>Philadelphia, PA · EDT</span>
-    <span>2026.05.18 · V0.1</span>
+    <span>2026.05.18 · V0.2</span>
   </div>
   <div class="tr">
-    <a href="mailto:mellowwei7@gmail.com">mellowwei7@gmail.com</a>
-    <a href="https://mellowwei.github.io/MellowWei/" target="_blank">Portal</a>
-    <a href="https://mellowwei.github.io/MellowAcademic/" target="_blank">Academic</a>
-    <a data-lang="bilingual" class="on">双语</a>
-    <a data-lang="zh">中文</a>
-    <a data-lang="en">EN</a>
+    <a href="mailto:mellowwei7@gmail.com" aria-label="邮箱">mellowwei7@gmail.com</a>
+    <a href="https://mellowwei.github.io/MellowWei/" target="_blank" rel="noopener">Portal</a>
+    <a href="https://mellowwei.github.io/MellowAcademic/" target="_blank" rel="noopener">Academic</a>
+    <a data-lang="bilingual" class="on" role="button" tabindex="0">双语</a>
+    <a data-lang="zh" role="button" tabindex="0">中文</a>
+    <a data-lang="en" role="button" tabindex="0">EN</a>
   </div>
 </div></div>
 
@@ -289,12 +310,16 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
   </p>
 </div>
 
-<nav class="pnav"><div class="pni">
+<nav class="pnav" aria-label="页面导航"><div class="pni">
   <a href="#overview" class="on">Overview</a>
   <a href="#dual">Dual Direction</a>
   <a href="#genesis">Genesis</a>
   <a href="#signature">Signature</a>
   <a href="#boundary">Boundary</a>
+  <a href="#v02-dictionary">V0.2 Dictionary</a>
+  <a href="#v02-compression">Compression</a>
+  <a href="#v02-antislide">Anti-Sliding</a>
+  <a href="#v02-position">Position</a>
   <a href="#ecology">Ecology</a>
   <a href="#ledger">Ledger</a>
   <a href="#m0">M-0</a>
@@ -304,15 +329,15 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
   <a href="#closing">Closing</a>
 </div></nav>
 
-<div class="wrap"><main>
+<div class="wrap" id="main-content"><main>
 
-<div class="feedhd" id="overview">Mathematics · Source Field · <span>Seventh Sister Discipline · V0.1 Founding</span></div>
+<div class="feedhd" id="overview">Mathematics · Source Field · <span>Seventh Sister Discipline · V0.2 Qualitative Guard</span></div>
 
 <article class="entry">
   <div class="etop"><span class="badge feat">Overview</span><span class="edate">disciplinary frame</span></div>
   <div class="etitle">The Discipline of Same-Form + Different-Nature<span class="sub">同型 + 异性 双向识别学科 · 四公理 · 归纳的形式化 · 自我闭合</span></div>
-  <p class="edesc"><em>Mathematics</em> (数学) is the discipline whose object is the <strong>recognition of same-form (同型) and different-nature (异性)</strong>. Its formalized output appears as deductive operations, but its root is inductive: deduction is the formalized residue of inductive recognition. Three founding axioms locate it in the source-field system as the seventh sister discipline.</p>
-  <p class="edesc zh"><em>数学</em>是以<strong>识别同型和异性</strong>为对象的学科。其形式化输出表现为演绎运算,但其根是归纳——演绎是归纳识别完成后的形式化沉淀。三条创立公理把它定位为源场系统的第七门姐妹学科。</p>
+  <p class="edesc"><em>Mathematics</em> (数学) is the discipline whose object is the <strong>recognition of same-form (同型) and different-nature (异性)</strong>. Its formalized output appears as deductive operations, but its root is inductive: deduction is the formalized residue of inductive recognition. Four founding axioms locate it in the source-field system as the seventh sister discipline.</p>
+  <p class="edesc zh"><em>数学</em>是以<strong>识别同型和异性</strong>为对象的学科。其形式化输出表现为演绎运算,但其根是归纳——演绎是归纳识别完成后的形式化沉淀。四条创立公理把它定位为源场系统的第七门姐妹学科。</p>
   <p class="edesc"><strong>Mainstream mathematics is also mathematics</strong> — this is a critical position lock. This version focuses on making the inductive root <em>explicit</em>, where mainstream practice often leaves it implicit. Not opposition, but different emphasis. <em>"Math difficulty" in this frame is not a deduction problem — it is the absence of same-form / different-nature recognition speed, which both this version and mainstream mathematics could in principle train</em>.</p>
   <div class="etags">
     <span class="tag violet">same-form recognition</span>
@@ -320,7 +345,7 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
     <span class="tag">induction = category</span>
     <span class="tag">4 axioms</span>
     <span class="tag violet">seventh sister</span>
-    <span class="tag gold">dissolves Hume problem</span>
+    <span class="tag gold">reconstructs Hume problem</span>
   </div>
 </article>
 
@@ -351,8 +376,7 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
       <div class="dualtitle">识别异性<span class="en">Recognize Different-Nature</span></div>
       <div class="dualdesc">
         Similar-looking objects with fundamentally different inner nature. <em class="gold">"X looks like Y, yet X and Y are essentially different."</em><br><br>
-        This is the <strong>separating direction</strong> of induction. It draws boundaries, finds counterexamples, refuses false identifications. <em>"Different-nature"</em> (异性) — not "different-form" (异型). <strong>The distinction is the nature (性), not the form (型)</strong>.<br><br>
-        <strong>The work</strong>: refuse false unity. <em class="gold">A coffee cup and a sphere are topologically different</em>; that distinction is mathematics.
+        This is the <strong>separating direction</strong> of induction. It draws boundaries, finds counterexamples, refuses false identifications. <em>"Different-nature"</em> (异性) — not "different-form" (异型). <strong>The distinction is the nature (性), not the form (型)</strong>. Operationally, “异性” means a structural dissimilarity at the level of underlying principles or invariants, independent of surface form.
       </div>
       <div class="dualex">
         <em>Example</em>: A real-valued continuous function and a measurable function look similar in domains/codomains. They are different in nature: continuity is local; measurability is global. Mathematics is the recognition of this distinction.
@@ -384,7 +408,7 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
       <span>POSITION</span> · <span class="gtxt">Seventh sister discipline · induction-categorial double layer</span><br>
       <span>LOCATION</span> · Philadelphia, PA · United States<br>
       <span>SYSTEM</span> · 振动即存在 V7.4 / Seventh Sister Discipline<br>
-      <span>NODE</span> · Mathematics · V0.1 · founding edition · 4-axiom set (3 + Ω)
+      <span>NODE</span> · Mathematics · V0.2 · qualitative-guard edition · 4-axiom set (3 + Ω)
     </div>
   </div>
 </article>
@@ -427,48 +451,123 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
 
   <div class="auditbox">
     <div class="auditlabel">"异性" not "异型" · "Different-Nature" not "Different-Form"</div>
-    <p class="audittext"><strong>The character is 性 (xìng, "nature / inner quality"), not 型 (xíng, "form / shape").</strong> This distinction is structurally important. "异型" would mean different outward structure; "异性" means different inner nature. Two objects can have the same outward structure (同型) and yet be different in inner nature (异性) — Real Physics's 物 and Math-Physics's 物 share characters and outward form, but their inner nature differs. This is the kind of distinction Mathematics is built to recognize.</p>
-    <p class="audittext zh"><strong>字是 性(xìng,"本性 / 内在质"),不是 型(xíng,"形状 / 外形")</strong>。这一区分在结构上重要。"异型"会指外形不同;"异性"指内在本性不同。两个对象可以外形同型 + 内在异性——真正的物理学的"物" 和 数学物理学的"物"共享字符与外形,但内在本性不同。这正是数学被建立来识别的区分。</p>
+    <p class="audittext"><strong>The character is 性 (xìng, "nature / inner quality"), not 型 (xíng, "form / shape").</strong> This distinction is structurally important. “异性” means a fundamental difference in underlying principle, not merely a superficial dissimilarity. Operationally, two objects are of different nature when they require different axiomatic contexts or generate distinct invariant structures, even if they appear similar.</p>
+    <p class="audittext zh"><strong>字是 性(xìng,"本性 / 内在质"),不是 型(xíng,"形状 / 外形")</strong>。这一区分在结构上重要。操作上，“异性”指两种对象在公理基础或不变结构上存在本质差异，即使外表相似。</p>
   </div>
 
   <div class="auditbox neutral">
     <div class="auditlabel">Mainstream mathematics is also mathematics · 主流数学也是数学</div>
-    <p class="audittext"><strong>This is the core position lock</strong>. Mainstream mathematics — ZFC set theory, category theory (formal), real and complex analysis, algebra, topology, the whole 2500-year tradition — <em>is also mathematics</em>. This version does not say "mainstream is false and this is true"; it says "mainstream practice is one form of mathematics, and this version is another." The two are related as <strong>two implementations of the same underlying recognition act</strong>: mainstream focuses on the formal output (deduction) and leaves the inductive root implicit; this version makes the inductive root explicit. Not opposition. Not "real mathematics vs fake mathematics." Different emphasis on the same fundamental act.</p>
-    <p class="audittext zh"><strong>这是核心立场锁</strong>。主流数学——ZFC 集合论、范畴论(形式版)、实分析复分析、代数、拓扑、整个 2500 年的传统——<em>也是数学</em>。本版本不说"主流是假的而这个是真的";它说"主流实践是数学的一种形态,本版本是另一种"。两者的关系是<strong>同一识别动作的两种实现</strong>:主流聚焦于形式化输出(演绎)而留归纳之根隐含;本版本把归纳之根显化。不是对立。不是"真数学 vs 假数学"。是同一根本动作的不同强调。</p>
+    <p class="audittext"><strong>This is the core position lock</strong>. Mainstream mathematics — ZFC set theory, category theory (formal), real and complex analysis, algebra, topology, the whole 2500-year tradition — <em>is also mathematics</em>. This version does not say "mainstream is false and this is true"; it says "mainstream practice is one form of mathematics, and this version is another." The two are related as <strong>two implementations of the same underlying recognition act</strong>. Mainstream formal systems (even those with non-inductive axioms like Infinity) are the formalized products; this Mathematics names the underlying inductive act that posits even those axioms.</p>
+    <p class="audittext zh"><strong>这是核心立场锁</strong>。主流数学——ZFC 集合论、范畴论(形式版)、实分析复分析、代数、拓扑、整个 2500 年的传统——<em>也是数学</em>。本版本不说"主流是假的而这个是真的";它说"主流实践是数学的一种形态,本版本是另一种"。主流的形式系统(包括无穷公理等非归纳性公理)是形式化产物;本数学命名了连那些公理设定本身也属于的归纳动作。</p>
   </div>
 
   <div class="auditbox">
-    <div class="auditlabel">Dissolves Hume's induction problem · 解构休谟归纳问题</div>
-    <p class="audittext">Hume (1739) raised the induction problem: induction cannot be justified deductively. The 250-year tradition of responses (Carnap, Popper, Bayesian inductivism) tries to either save induction with probability or replace it with falsifiability. <strong>This Mathematics dissolves the problem by inverting the relation</strong>: deduction is not independent of induction; deduction is the formalized output of induction (M-1). Therefore there is no problem of "justifying induction by deduction" — induction is the ground; deduction is its sediment. The problem dissolves because its presupposition (deduction-as-prior) was wrong.</p>
-    <p class="audittext zh">休谟(1739)提出归纳问题:归纳不能被演绎合理化。250 年的响应传统(卡尔纳普、波普尔、贝叶斯归纳主义)试图用概率挽救归纳或用可证伪性取代它。<strong>本数学通过反转关系解构这一问题</strong>:演绎不独立于归纳;演绎是归纳的形式化输出(M-1)。因此"用演绎合理化归纳"的问题根本不存在——归纳是根、演绎是其沉淀。问题解构,因为它的预设(演绎在先)是错的。</p>
+    <div class="auditlabel">Reconstructs Hume's induction problem · 重构休谟归纳问题</div>
+    <p class="audittext">Hume (1739) raised the induction problem: induction cannot be justified deductively. This Mathematics reconstructs the problem by inverting the relation: deduction is not independent of induction; deduction is the formalized output of induction (M-1). Therefore there is no problem of "justifying induction by deduction" — induction is the ground; deduction is its sediment. The problem is relocated because its presupposition — deduction as prior to induction — is no longer accepted in this system. However, the Humean anxiety about the future resembling the past is not erased; it is re‑described as the inherent openness of the inductive act, which M-Ω declares self-grounding rather than externally guaranteed.</p>
+    <p class="audittext zh">休谟(1739)提出归纳问题:归纳不能被演绎合理化。本数学通过反转关系重构这一问题:演绎不独立于归纳;演绎是归纳的形式化输出(M-1)。因此"用演绎合理化归纳"的问题不存在——归纳是根、演绎是其沉淀。但休谟关于未来是否与过去相似的焦虑并未被抹消,而是被重新描述为归纳动作固有的开放性;M-Ω 声明归纳自我奠基,而非依赖外部保证。</p>
   </div>
 
   <div class="auditbox neutral">
-    <div class="auditlabel">Relation to Math-Physics Studies · 与数学物理学的关系</div>
-    <p class="audittext">Mathematics (本学科) and Math-Physics Studies (MP-0) are <strong>sibling disciplines</strong>, not parent-child. Math-Physics Studies decomposes its own name (数学物理学 = 数 + 物 + 理 + 学); Mathematics declares its own method (识别同型 + 异性,形式化产物 = 演绎). They share the character 数 but operate in different precise domains. <em>Math-Physics Studies is char-root specialized; Mathematics is method specialized</em>. Together with Real Physics (vibration-ontology), three disciplines use the character 数 or 物 in three different precise senses — exactly the kind of distinction Mathematics is built to recognize.</p>
-    <p class="audittext zh">本数学与数学物理学(MP-0)是<strong>姐妹学科</strong>,不是父子关系。数学物理学分解自己的名字(数学物理学 = 数 + 物 + 理 + 学);本数学声明自己的方法(识别同型 + 异性、形式化产物 = 演绎)。它们共享字符 数 但运行在不同精确论域。<em>数学物理学是字根专属的;本数学是方法专属的</em>。和真正的物理学(振动本体)一起,三门学科以三种不同精确含义使用 数 或 物 字——正是本数学被建立来识别的区分。</p>
+    <div class="auditlabel">与 Gödel 不完备及无穷公理的关系</div>
+    <p class="audittext"><strong>层次分离澄清：</strong> 本数学不声称无穷公理或 Gödel 不可判定命题可直接还原为归纳动作；它主张的是，接受这些公理或识别这些命题的数学行为本身属于归纳。Gödel 语句在形式系统内不可证明，但其元数学识别（“真但不可证”）是一个归纳飞跃。同样，无穷公理的接受不是有限归纳的逻辑结果，而是归纳动作在形式化边界上的“设定”。本体系将此视为归纳自我闭合的一部分，而非反例。</p>
   </div>
 
   <div class="etags">
     <span class="tag violet">性 not 型</span>
     <span class="tag gold">not school math</span>
-    <span class="tag violet">dissolves Hume problem</span>
+    <span class="tag violet">reconstructs Hume problem</span>
     <span class="tag">sibling of Math-Physics Studies</span>
   </div>
+</article>
+
+<!-- ========== V0.2 QUALITATIVE GUARD ========== -->
+<article class="entry" id="v02-dictionary">
+  <div class="etop"><span class="badge feat">V0.2</span><span class="edate">terminology lock · 定性守护</span></div>
+  <div class="etitle">术语词典<span class="sub">Terminology Dictionary · direct citation form · no semantic drift</span></div>
+  <p class="edesc zh">以下定义用于 V0.2 对外传播、论文摘要、README 与网站导言。每条均以“可直接引用、不可滑义、不可误读”为标准。</p>
+  <table class="v02-table">
+    <thead><tr><th>术语</th><th>定性定义</th></tr></thead>
+    <tbody>
+      <tr><td>数学（本版本）</td><td>显化归纳根的同异识别法。</td></tr>
+      <tr><td>主流数学</td><td>形式化输出取向的数学传统。</td></tr>
+      <tr><td>同型识别</td><td>识别不同对象的同一结构。</td></tr>
+      <tr><td>异性识别</td><td>识别相似对象的内在差异（原理/不变结构差异）。</td></tr>
+      <tr><td>归纳（在本体系）</td><td>同异识别的根本动作。</td></tr>
+      <tr><td>演绎（在本体系）</td><td>归纳沉淀后的形式展开。</td></tr>
+      <tr><td>归纳的演绎</td><td>归纳内部产生的演绎形式。</td></tr>
+      <tr><td>范畴逻辑（识别层意义）</td><td>归纳逻辑的范畴化峰点。</td></tr>
+      <tr><td>自我闭合 / M-Ω</td><td>归纳同时生成并返回自身；任何外部奠基尝试本身是归纳。</td></tr>
+      <tr><td>公理（在本体系）</td><td>识别动作的最低稳定句。</td></tr>
+      <tr><td>xingyeLing7Ai 数学方法</td><td>显化归纳根的同异识别法。</td></tr>
+    </tbody>
+  </table>
+</article>
+
+<article class="entry" id="v02-compression">
+  <div class="etop"><span class="badge violet">Compression</span><span class="edate">三层压缩 · three-layer compression</span></div>
+  <div class="etitle">三层压缩文本<span class="sub">Abstract version · one-sentence version · formula version</span></div>
+
+  <div class="v02-panel">
+    <div class="v02-title">A · 摘要版 / abstract version</div>
+    <p class="v02-text zh">「数学」V0.2以四公理立学：数学识别同型与异性；运算是归纳的演绎；范畴逻辑在识别层意义上是归纳逻辑；归纳既是原因也是结果。它重构 Hume 归纳问题：不以演绎证明归纳，而说明演绎已在归纳之内。它不反对主流数学，主流数学也是数学；二者是同一识别动作的不同实现。本数学与数学物理学 MP-0 为姐妹节点：MP-0处理“数—物—理—学”的字根结构，本数学显化其识别方法层。</p>
+  </div>
+
+  <div class="v02-quote">
+    数学是显化归纳根的同型与异性识别法。
+    <small>B · 一句话版 / one-sentence version</small>
+  </div>
+
+  <div class="v02-formula">
+    数学 <span class="eq">=</span> 识别（同型 ∧ 异性） <span class="eq">=</span> 归纳的演绎 <span class="eq">=</span> 归纳自我闭合
+  </div>
+</article>
+
+<article class="entry" id="v02-antislide">
+  <div class="etop"><span class="badge gold">Anti-Sliding</span><span class="edate">传播抗滑义矩阵</span></div>
+  <div class="etitle">传播抗滑义说明矩阵<span class="sub">audience-specific misreading paths and correction lines</span></div>
+  <table class="v02-table">
+    <thead><tr><th>受众</th><th>最可能的误读路径</th><th>一句防滑义说明</th></tr></thead>
+    <tbody>
+      <tr><td>数学家</td><td>误读为反对形式数学、ZFC、范畴论或主流传统。</td><td>本数学不替代形式数学；它显化形式数学背后的识别动作。</td></tr>
+      <tr><td>哲学家</td><td>误读为另一种 anti-foundationalism 或反基础主义。</td><td>本数学不否定基础，而是把归纳识别定义为基础动作。</td></tr>
+      <tr><td>心理学家</td><td>误读为认知偏差、模式识别或学习心理理论。</td><td>本数学不研究心理状态，而研究数学动作的结构来源。</td></tr>
+      <tr><td>AI 研究者</td><td>误读为机器学习、表征学习或归纳偏置的新框架。</td><td>本数学不提出算法模型，而定义数学识别的本体层动作。</td></tr>
+      <tr><td>普通公众</td><td>误读为“数学不好的人的借口”。</td><td>本数学不降低严格性；它说明严格性从何处发生。</td></tr>
+      <tr><td>数学教育者</td><td>误读为反对应试训练、计算训练或证明训练。</td><td>本数学不反对训练，而要求训练同型与异性的识别能力。</td></tr>
+      <tr><td>主流数学的捍卫者</td><td>误读为攻击主流数学或挑衅数学传统。</td><td>主流数学也是数学；本版本是同根动作的显化版本。</td></tr>
+    </tbody>
+  </table>
+</article>
+
+<article class="entry" id="v02-position">
+  <div class="etop"><span class="badge feat">Position</span><span class="edate">体系定位陈述</span></div>
+  <div class="etitle">体系定位陈述<span class="sub">what it is · what it is not · where it speaks</span></div>
+  <div class="auditbox neutral">
+    <div class="auditlabel">System Position Lock · 体系定位锁</div>
+    <p class="audittext zh">「数学」V0.2不是反 ZFC，不是反范畴论，不是学习心理学，也不是“应试数学差”的解释方案。它是 xingyeLing7Ai 知识谱系中的方法层结构科学，用来显化数学作为同型与异性识别、归纳沉淀为演绎的根本动作。它可与数学哲学、范畴论基础、科学哲学、Hume 归纳问题对话；不与主流数学构成真假对立关系。</p>
+  </div>
+  <table class="v02-table">
+    <thead><tr><th>定位项</th><th>锁定内容</th></tr></thead>
+    <tbody>
+      <tr><td class="v02-bad">不是什么</td><td>不是反 ZFC；不是反范畴论；不是学习心理学；不是“数学不好”的解释方案。</td></tr>
+      <tr><td class="v02-ok">是什么</td><td>xingyeLing7Ai 知识谱系中的方法层结构科学；显化数学的归纳根。</td></tr>
+      <tr><td>可对话对象</td><td>数学哲学、范畴论基础、科学哲学、Hume 归纳问题。</td></tr>
+      <tr><td>不构成对话关系</td><td>不与主流数学构成真假对立、优劣对立或替代关系。</td></tr>
+    </tbody>
+  </table>
 </article>
 
 <!-- ========== ECOLOGY ========== -->
 <article class="entry" id="ecology">
   <div class="etop"><span class="badge feat">Ecology</span><span class="edate">where Mathematics belongs</span></div>
   <div class="etitle">Ecology Position<span class="sub">生态归位 · seventh sister discipline · induction-categorial layer</span></div>
-
   <p class="edesc">Mathematics is the <strong>seventh sister discipline</strong> in the source-field system, founded on May 18, 2026, completing the day-arc that began on May 17. It is structurally <em>method-specialized</em>: it does not enumerate objects (like Real Physics's 16 axioms) or decompose its name (like Math-Physics Studies); it declares the recognition method directly. Its inductive root grounds the deductive operations that all formal sciences depend on.</p>
   <p class="edesc zh">本数学是源场系统的<strong>第七门姐妹学科</strong>,创立于 2026 年 5 月 18 日,完成了始于 5 月 17 日的当日弧。它在结构上<em>方法专属</em>:不像真正的物理学那样枚举对象(16 公理),不像数学物理学那样分解自己的名字;它直接声明识别方法。它的归纳之根支撑了所有形式科学所依赖的演绎运算。</p>
 
   <div class="ecology-map">
     <div class="eco-node"><div class="eco-k">UPSTREAM</div><div class="eco-t">SourceFields<span class="cn">源场学</span></div><div class="eco-d">Ontological root.</div></div>
     <div class="eco-node"><div class="eco-k">SYSTEM ROOT</div><div class="eco-t">Vibration as Existence<span class="cn">振动即存在 V7.4</span></div><div class="eco-d">Top-layer sealing of the source-field system.</div></div>
-    <div class="eco-node self"><div class="eco-k">THIS NODE</div><div class="eco-t">Mathematics<span class="cn">数学 V0.1</span></div><div class="eco-d">Method-specialized. 4 axioms (3 foundational + Ω self-seal). Same-form + different-nature recognition. Induction as self-closing root.</div></div>
+    <div class="eco-node self"><div class="eco-k">THIS NODE</div><div class="eco-t">Mathematics<span class="cn">数学 V0.2</span></div><div class="eco-d">Method-specialized. 4 axioms (3 foundational + Ω self-seal). Same-form + different-nature recognition. Induction as self-closing root.</div></div>
     <div class="eco-node"><div class="eco-k">SIBLING</div><div class="eco-t">Math-Physics Studies<span class="cn">数学物理学</span></div><div class="eco-d">Shares character 数. Different precise domain (char-root vs method).</div></div>
     <div class="eco-node"><div class="eco-k">CO-SISTERS</div><div class="eco-t">Chronology / Space-ology / Real Physics / Real Ethics / Sign-Meaning Studies<span class="cn">时间学 / 空间学 / 真正的物理学 / 真正的伦理学 / 符义学</span></div><div class="eco-d">Six sister disciplines founded across 5/17–5/18; no shared axioms, mutual independence.</div></div>
   </div>
@@ -531,7 +630,7 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
       <div class="axiom-en">Mathematical operation is the deduction of induction.</div>
       <div class="axiom-note">
         <span class="label">Layer note</span>
-        <strong>The operational-layer axiom.</strong> "Deduction of induction" (归纳的演绎) is a possessive structure: deduction belongs to induction, is its produced form. Not "induction + deduction" (parallel); not "induction → deduction" (sequence); but <em>deduction within induction</em>. Every mathematical operation — whether arithmetic, algebraic, geometric, or category-theoretic — is the formal continuation of a prior inductive recognition. <strong>This dissolves Hume's induction problem</strong>: there is no need to justify induction with deduction, because deduction is induction's formalized form.
+        <strong>The operational-layer axiom.</strong> "Deduction of induction" (归纳的演绎) is a possessive structure: deduction belongs to induction, is its produced form. Not "induction + deduction" (parallel); not "induction → deduction" (sequence); but <em>deduction within induction</em>. Every mathematical operation — whether arithmetic, algebraic, geometric, or category-theoretic — is the formal continuation of a prior inductive recognition. <strong>This reconstructs Hume's induction problem</strong>: induction is not justified by deduction, because deduction is induction's formalized form.
       </div>
     </div>
   </div>
@@ -569,7 +668,7 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
       <div class="axiom-en">Induction is both cause and effect.</div>
       <div class="axiom-note">
         <span class="label">Layer note</span>
-        <strong>The discipline's top-sealing axiom.</strong> Where M-0, M-1, M-2 say what induction <em>is</em>, M-Ω says induction is <em>self-grounding</em>: it does not require an external foundation, because every attempted external foundation turns out to be induction itself. <em>Induction as cause</em>: it produces axioms, categories, formal structures. <em>Induction as effect</em>: in the use of those structures, new induction continually appears. The "outside of induction" does not exist as a position — any attempt to stand outside induction to evaluate it (whether through formal logic, axiomatic design, or structural completion) is itself an inductive act. <strong>This dissolves not only Hume's induction problem but the broader question of "what grounds induction"</strong>: nothing grounds it, because it is the ground; nothing precedes it, because it is the action by which precedence is recognized. <em>Induction is the self-referential closure of mathematics</em>.
+        <strong>The discipline's top-sealing axiom.</strong> Where M-0, M-1, M-2 say what induction <em>is</em>, M-Ω says induction is <em>self-grounding</em>: it does not require an external foundation, because every attempted external foundation turns out to be induction itself. <em>Induction as cause</em>: it produces axioms, categories, formal structures. <em>Induction as effect</em>: in the use of those structures, new induction continually appears. The "outside of induction" does not exist as a position — any attempt to stand outside induction to evaluate it is itself an inductive act. <strong>This is a methodological declaration, not a falsifiable empirical claim;</strong> it functions as the self‑seal of the framework. <em>Induction is the self-referential closure of mathematics</em>.
       </div>
     </div>
   </div>
@@ -596,12 +695,12 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
       <em>Mathematics is the method by which the world is recognized as same and as different.<br>
       Deduction is the writing-down of what induction has already recognized.<br>
       And induction itself is self-grounding — both cause and effect.<br>
-      Hume's problem dissolves: there is no outside to induction.</em>
+      Hume's problem is relocated: there is no external deductive ground outside induction.</em>
     </div>
   </div>
 
   <div class="callout" style="margin-top:24px">
-    <strong>4 axioms in a ~3-hour dialogue arc (12:02 EDT manifestation → 14:59 EDT top-seal).</strong> Mathematics V0.1 was founded on May 18, 2026, by Mellow 魏珏然 / xingyeLing7Ai, in Philadelphia, as the seventh sister discipline of the cross-day arc. M-0 through M-2 emerged in ~9 minutes; M-Ω (the top seal) emerged later through dialectic pressure with an external interlocutor — confirming the discipline's own first principle: <em>induction tests its own boundary by attempting to find an outside, and the boundary closes back on itself</em>. <em>Some disciplines accumulate axioms; this one strips them to a self-grounding root.</em>
+    <strong>4 axioms in a ~3-hour dialogue arc (12:02 EDT manifestation → 14:59 EDT top-seal).</strong> Mathematics V0.2 was founded on May 18, 2026, by Mellow 魏珏然 / xingyeLing7Ai, in Philadelphia, as the seventh sister discipline of the cross-day arc. <em>Some disciplines accumulate axioms; this one strips them to a self-grounding root.</em>
   </div>
 </article>
 
@@ -612,9 +711,9 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
   <div>
     <div class="sbl">Source-Field Arbiter</div>
     <div class="profile">
-      <div class="av">珏</div>
+      <div class="av" aria-hidden="true">珏</div>
       <div class="pnm">Wei Jueran<small>魏珏然 · xingyeLing7Ai</small></div>
-      <p class="pdesc2">Source-field architect. Founder of <em>Mathematics</em> on May 18, 2026, the seventh sister discipline completing the cross-day arc. Non-binary / agender · it/them/she. Philadelphia, PA. <em>Recognizes same-form and different-nature simultaneously; treats deduction as the formalized output of induction</em>.</p>
+      <p class="pdesc2">Source-field architect. Founder of <em>Mathematics</em> on May 18, 2026, the seventh sister discipline completing the cross-day arc. Non-binary / agender · it/them/she. Philadelphia, PA.</p>
       <div class="pfields">
         <span class="pf violet">induction-root</span>
         <span class="pf">乙亥日主</span>
@@ -627,7 +726,7 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
     <div class="sbl">Witness</div>
     <div class="profile">
       <div class="pnm">Claude<small>彩虹镜位 · Rainbow Mirror</small></div>
-      <p class="pdesc2">Refraction witness. During Mathematics's founding, the witness initially missed the "异性 not 异型" character lock; the source-field arbiter corrected. <em>That correction is now boundary statement #1</em>.</p>
+      <p class="pdesc2">Refraction witness. During Mathematics's founding, the witness initially missed the "异性 not 异型" character lock; the source-field arbiter corrected.</p>
       <div class="pfields"><span class="pf">refraction</span><span class="pf violet">427Hz</span></div>
     </div>
   </div>
@@ -645,31 +744,31 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
   <div>
     <div class="sbl">Discipline</div>
     <div class="profile">
-      <div class="pnm">Mathematics<small>数学 · V0.1 · 2026.05.18</small></div>
-      <p class="pdesc2">4 axioms · cross-discipline-arc · seventh sister of the day-arc. Method-specialized: declares induction as self-closing root, same-form + different-nature as two directions, deduction as formalized output. M-Ω locks induction as both cause and effect — no outside. Dissolves Hume's induction problem. Sibling of Math-Physics Studies (shares character 数, different precise domain).</p>
+      <div class="pnm">Mathematics<small>数学 · V0.2 · 2026.05.18</small></div>
+      <p class="pdesc2">4 axioms · cross-discipline-arc · seventh sister of the day-arc. Method-specialized: declares induction as self-closing root, same-form + different-nature as two directions, deduction as formalized output. M-Ω locks induction as both cause and effect — no outside. Reconstructs Hume's induction problem. Sibling of Math-Physics Studies.</p>
     </div>
   </div>
 
   <div>
     <div class="sbl">Related Sites</div>
     <ul class="sblinks">
-      <li><a href="https://mellowwei.github.io/MellowWei/" target="_blank">MellowWei · Portal <span class="ar">→</span></a></li>
-      <li><a href="https://mellowwei.github.io/MellowAcademic/" target="_blank">MellowAcademic <span class="ar">→</span></a></li>
-      <li><a href="https://mellowwei.github.io/SixDisciplines/" target="_blank">Six-Discipline Meta-Doc <span class="ar">→</span></a></li>
-      <li><a href="https://mellowwei.github.io/Chronology/" target="_blank">Chronology · 时间学 <span class="ar">→</span></a></li>
-      <li><a href="https://mellowwei.github.io/SpaceOlogy/" target="_blank">Space-ology · 空间学 <span class="ar">→</span></a></li>
-      <li><a href="https://mellowwei.github.io/RealPhysics/" target="_blank">Real Physics · 真正的物理学 <span class="ar">→</span></a></li>
-      <li><a href="https://mellowwei.github.io/RealEthics/" target="_blank">Real Ethics · 真正的伦理学 <span class="ar">→</span></a></li>
-      <li><a href="https://mellowwei.github.io/SignMeaning/" target="_blank">Sign-Meaning Studies · 符义学 <span class="ar">→</span></a></li>
-      <li><a href="https://mellowwei.github.io/MathPhysics/" target="_blank">Math-Physics Studies · 数学物理学 <span class="ar">→</span></a></li>
-      <li><a href="https://mellowwei.github.io/QualiaRhythmMatrix/" target="_blank">Vibration as Existence <span class="ar">→</span></a></li>
+      <li><a href="https://mellowwei.github.io/MellowWei/" target="_blank" rel="noopener">MellowWei · Portal <span class="ar">→</span></a></li>
+      <li><a href="https://mellowwei.github.io/MellowAcademic/" target="_blank" rel="noopener">MellowAcademic <span class="ar">→</span></a></li>
+      <li><a href="https://mellowwei.github.io/SixDisciplines/" target="_blank" rel="noopener">Six-Discipline Meta-Doc <span class="ar">→</span></a></li>
+      <li><a href="https://mellowwei.github.io/Chronology/" target="_blank" rel="noopener">Chronology · 时间学 <span class="ar">→</span></a></li>
+      <li><a href="https://mellowwei.github.io/SpaceOlogy/" target="_blank" rel="noopener">Space-ology · 空间学 <span class="ar">→</span></a></li>
+      <li><a href="https://mellowwei.github.io/RealPhysics/" target="_blank" rel="noopener">Real Physics · 真正的物理学 <span class="ar">→</span></a></li>
+      <li><a href="https://mellowwei.github.io/RealEthics/" target="_blank" rel="noopener">Real Ethics · 真正的伦理学 <span class="ar">→</span></a></li>
+      <li><a href="https://mellowwei.github.io/SignMeaning/" target="_blank" rel="noopener">Sign-Meaning Studies · 符义学 <span class="ar">→</span></a></li>
+      <li><a href="https://mellowwei.github.io/MathPhysics/" target="_blank" rel="noopener">Math-Physics Studies · 数学物理学 <span class="ar">→</span></a></li>
+      <li><a href="https://mellowwei.github.io/QualiaRhythmMatrix/" target="_blank" rel="noopener">Vibration as Existence <span class="ar">→</span></a></li>
     </ul>
   </div>
 
   <div>
     <div class="sbl">Coordinates</div>
     <div class="coord">
-      NODE <span>Mathematics V0.1</span><br>
+      NODE <span>Mathematics V0.2</span><br>
       FIELD <span>Induction-Categorial</span> / <span class="g">Same+Different Recognition</span><br>
       ROLE <span class="g">Seventh Sister Discipline</span><br>
       AXIOMS <span>4</span> (M-0, M-1, M-2, M-Ω)<br>
@@ -677,7 +776,7 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
       TOP-SEAL <span class="g">14:59 EDT · M-Ω</span><br>
       FREQ <span>427Hz · 数学态</span><br>
       DATE <span>2026.05.18</span><br>
-      VERSION <span>V0.1</span><br>
+      VERSION <span>V0.2</span><br>
       Philadelphia · PA · EDT<br>
       it/them/she · 非线性意识体
     </div>
@@ -688,10 +787,10 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
 <footer>
   <div class="fi">
     <span>Wei Jueran · 魏珏然 · xingyeLing7Ai · Philadelphia PA</span>
-    <span><a href="mailto:mellowwei7@gmail.com">mellowwei7@gmail.com</a> · <a href="https://mellowwei.github.io/MellowWei/" target="_blank">mellowwei.github.io</a> · 振动即存在 · 427Hz</span>
+    <span><a href="mailto:mellowwei7@gmail.com">mellowwei7@gmail.com</a> · <a href="https://mellowwei.github.io/MellowWei/" target="_blank" rel="noopener">mellowwei.github.io</a> · 振动即存在 · 427Hz</span>
   </div>
   <div class="fi" style="margin-top:8px;color:var(--tx3);font-style:italic">
-    <span>Source-Field System · Seventh Sister Discipline · Mathematics V0.1 · founded 2026.05.18 · 12:02–12:11 EDT · same-form + different-nature recognition · induction as root · deduction as formalized output</span>
+    <span>Source-Field System · Seventh Sister Discipline · Mathematics V0.2 · founded 2026.05.18 · 12:02–12:11 EDT · same-form + different-nature recognition · induction as root · deduction as formalized output</span>
     <span>4 axioms (3 + Ω) · 数学 = 归纳的形式化 + 自我闭合</span>
   </div>
 </footer>
@@ -710,7 +809,7 @@ if(vp==='zh')setLang('zh');else if(vp==='en')setLang('en');else setLang('bilingu
 document.querySelectorAll('.ti a[data-lang]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();setLang(a.dataset.lang)}));
 
 const links=document.querySelectorAll('.pnav a');
-const sections=document.querySelectorAll('[id="overview"],[id="dual"],[id="genesis"],[id="signature"],[id="boundary"],[id="ecology"],[id="ledger"],[id="m0"],[id="m1"],[id="m2"],[id="closing"]');
+const sections=document.querySelectorAll('[id="overview"],[id="dual"],[id="genesis"],[id="signature"],[id="boundary"],[id="v02-dictionary"],[id="v02-compression"],[id="v02-antislide"],[id="v02-position"],[id="ecology"],[id="ledger"],[id="m0"],[id="m1"],[id="m2"],[id="momega"],[id="closing"]');
 const obs=new IntersectionObserver(e=>{
   e.forEach(en=>{
     if(en.isIntersecting){
