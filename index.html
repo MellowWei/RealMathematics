@@ -17,6 +17,8 @@
   --tx:#e1e1e8;--tx2:#aaaab6;--tx3:#595965;--hd:#ffffff;
   --deepviolet:#9b8eff;--mathgold:#e8c84f;
   --deepvioletbg:#2c2c54;
+  --mainstream:#8a8a96;--mainstream-hi:#b8b8c4;
+  --rootcolor:#d4a574;
   --max-width:1080px;
   --font-mono:'Space Mono',monospace;
   --font-serif:'Spectral',serif;
@@ -72,6 +74,7 @@ a{color:inherit}
 .badge.feat{color:var(--a1);border-color:var(--border-hi);background:rgba(255,255,255,.06)}
 .badge.violet{color:var(--deepviolet);border-color:rgba(155,142,255,.4);background:rgba(155,142,255,.05)}
 .badge.gold{color:var(--mathgold);border-color:rgba(232,200,79,.36);background:rgba(232,200,79,.05)}
+.badge.mainstream{color:var(--mainstream-hi);border-color:rgba(184,184,196,.38);background:rgba(184,184,196,.05)}
 .edate{font-family:var(--font-mono);font-size:10px;color:var(--tx3)}
 .etitle{font-family:var(--font-serif);font-size:24px;font-weight:500;color:var(--hd);line-height:1.3;margin-bottom:10px}
 .etitle .sub{display:block;font-size:13px;font-style:italic;font-weight:300;color:var(--tx2);margin-top:4px}
@@ -202,6 +205,109 @@ a{color:inherit}
 .v02-table th{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--a1);background:rgba(255,255,255,.035);font-weight:700}.v02-table td:first-child{color:var(--a1);font-weight:500}.v02-table .lock{color:var(--mathgold);font-family:var(--font-mono);font-size:11px;letter-spacing:.04em}
 .v02-quote{margin:16px 0;padding:16px 18px;background:var(--bg2);border:1px solid rgba(232,200,79,.32);border-left:3px solid var(--mathgold);font-family:var(--font-cn);font-size:16px;color:var(--a1);line-height:1.8;letter-spacing:.02em}.v02-quote small{display:block;margin-top:8px;font-family:var(--font-mono);font-size:9px;color:var(--tx3);letter-spacing:.14em;text-transform:uppercase}.v02-formula{font-family:var(--font-cn);font-size:19px;color:var(--deepviolet);text-align:center;line-height:1.8;font-weight:600;margin:18px 0;padding:16px;background:var(--bg2);border:1px solid var(--border-hi)}.v02-formula .eq{color:var(--mathgold);font-family:var(--font-mono);margin:0 8px;font-size:15px}.v02-bad{color:#ff9ab8}.v02-ok{color:var(--mathgold)}
 
+/* === VS MAINSTREAM (NEW IN THIS VERSION) === */
+.vsbox{margin:22px 0;padding:24px 26px;background:linear-gradient(135deg,rgba(212,165,116,.06),rgba(0,0,0,.4));border:1px solid var(--border-hi);border-left:3px solid var(--rootcolor);position:relative}
+.vsbox::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--deepviolet),var(--rootcolor),var(--mainstream-hi))}
+.vshd{font-family:var(--font-mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--rootcolor);margin-bottom:14px;font-weight:700}
+.vstable{width:100%;border-collapse:collapse;margin:14px 0;border:1px solid var(--border)}
+.vstable th,.vstable td{border:1px solid var(--border);padding:10px 12px;vertical-align:top;font-size:12px;line-height:1.7;color:var(--tx2)}
+.vstable th{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--a1);background:rgba(255,255,255,.03);font-weight:700;text-align:left}
+.vstable th.violet{color:var(--deepviolet)}
+.vstable th.mainstream{color:var(--mainstream-hi)}
+.vstable td:first-child{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--rootcolor);font-weight:700;background:rgba(212,165,116,.04);width:115px}
+.vstable td.violet-side{border-left:2px solid var(--deepviolet)}
+.vstable td.mainstream-side{border-left:2px solid var(--mainstream-hi)}
+.vstable strong{color:var(--a1);font-weight:500}
+.vstable em.violet{color:var(--deepviolet);font-style:normal;font-weight:500}
+.vstable em.mainstream{color:var(--mainstream-hi);font-style:normal;font-weight:500}
+.vslink{display:inline-block;margin-top:14px;padding:10px 18px;font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--rootcolor);text-decoration:none;border:1px solid rgba(212,165,116,.42);transition:background .15s,color .15s,border-color .15s}
+.vslink:hover{background:rgba(212,165,116,.08);color:var(--a1);border-color:var(--rootcolor)}
+.vslink::after{content:' →';opacity:.6}
+.vslock{font-family:var(--font-cn);font-size:15px;color:var(--a1);line-height:1.72;font-weight:500;margin:10px 0;padding:14px 18px;background:var(--bg2);border-left:2px solid var(--rootcolor)}
+.vslock em.violet{color:var(--deepviolet);font-style:normal;font-weight:600}
+.vslock em.mainstream{color:var(--mainstream-hi);font-style:normal;font-weight:600}
+.vslock em.root{color:var(--rootcolor);font-style:normal;font-weight:600}
+
+/* ==================== ROOT DIAGRAM (in vs-mainstream) ==================== */
+.rootdiag{margin:20px 0;padding:28px 26px;background:linear-gradient(135deg,rgba(212,165,116,.06),rgba(0,0,0,.4));border:1px solid var(--border-hi);position:relative;text-align:center}
+.rootdiag::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--deepviolet),var(--rootcolor),var(--mainstream-hi))}
+.rootdiag-hd{font-family:var(--font-mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--rootcolor);margin-bottom:18px;font-weight:700}
+.rootdiag-flow{display:flex;flex-direction:column;align-items:center;gap:14px;font-family:var(--font-cn)}
+.rootdiag-node{padding:12px 24px;border:1px solid var(--border-hi);background:var(--bg2);font-size:15px;font-weight:500;color:var(--a1);letter-spacing:.04em;min-width:260px}
+.rootdiag-node.root{border-color:var(--rootcolor);background:linear-gradient(135deg,rgba(212,165,116,.1),rgba(155,142,255,.04));color:var(--rootcolor);font-size:17px;font-weight:600}
+.rootdiag-node .en{display:block;font-family:var(--font-serif);font-style:italic;font-size:11.5px;color:var(--a2);margin-top:4px;font-weight:300}
+.rootdiag-arrow{font-family:var(--font-mono);font-size:16px;color:var(--tx3)}
+.rootdiag-split{display:flex;gap:24px;margin-top:4px;align-items:center;justify-content:center;flex-wrap:wrap}
+.rootdiag-split .rootdiag-node{min-width:200px}
+.rootdiag-split .rootdiag-node.violet{border-color:var(--deepviolet);background:linear-gradient(135deg,rgba(155,142,255,.1),rgba(155,142,255,.02));color:var(--deepviolet)}
+.rootdiag-split .rootdiag-node.mainstream{border-color:var(--mainstream-hi);background:linear-gradient(135deg,rgba(184,184,196,.08),rgba(184,184,196,.02));color:var(--mainstream-hi)}
+.rootdiag-caption{font-family:var(--font-mono);font-size:11px;color:var(--tx2);margin-top:16px;letter-spacing:.05em;line-height:1.8;max-width:680px;margin-left:auto;margin-right:auto}
+.rootdiag-caption em{color:var(--rootcolor);font-style:normal}
+
+/* ==================== DUAL CARDS ==================== */
+.dualcard{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+.dcard{padding:0;border:1px solid var(--border-hi);background:var(--bg2);overflow:hidden;position:relative}
+.dcard.violet{border-color:rgba(155,142,255,.45)}
+.dcard.violet::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--deepviolet)}
+.dcard.mainstream{border-color:rgba(184,184,196,.34)}
+.dcard.mainstream::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--mainstream-hi)}
+.dcard-head{padding:16px 20px 12px;border-bottom:1px solid var(--border)}
+.dcard-label{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px;font-weight:700}
+.dcard.violet .dcard-label{color:var(--deepviolet)}
+.dcard.mainstream .dcard-label{color:var(--mainstream-hi)}
+.dcard-title{font-family:var(--font-serif);font-size:20px;font-weight:500;color:var(--hd);line-height:1.3;margin-bottom:4px}
+.dcard-title .cn{display:block;font-family:var(--font-cn);font-size:15px;margin-top:4px;font-weight:500}
+.dcard.violet .dcard-title .cn{color:var(--deepviolet)}
+.dcard.mainstream .dcard-title .cn{color:var(--mainstream-hi)}
+.dcard-body{padding:16px 20px;font-size:12.5px;line-height:1.78;color:var(--tx2)}
+.dcard-body strong{color:var(--a1);font-weight:500}
+.dcard-body em{color:var(--tx);font-style:italic}
+.dcard-body p{margin-bottom:9px}
+.dcard-body p:last-child{margin-bottom:0}
+.dcard-body ul{margin:6px 0 6px 16px;padding:0}
+.dcard-body li{margin-bottom:3px;font-size:12px}
+.dcard-body li::marker{color:var(--tx3)}
+
+/* ==================== SCENARIO BOX ==================== */
+.scenariobox{margin:20px 0;border:1px solid var(--border-hi);background:var(--bg2);overflow:hidden}
+.scenariohd{padding:13px 22px;background:rgba(212,165,116,.05);border-bottom:1px solid var(--border-hi);font-family:var(--font-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--rootcolor);font-weight:700}
+.scenariohd em{color:var(--a1);font-style:normal}
+.scenariosplit{display:grid;grid-template-columns:1fr 1fr}
+.scenariocell{padding:18px 20px;border-right:1px solid var(--border)}
+.scenariocell:last-child{border-right:none}
+.scenariocell.violet{background:linear-gradient(135deg,rgba(155,142,255,.04),transparent)}
+.scenariocell.mainstream{background:linear-gradient(135deg,rgba(184,184,196,.04),transparent)}
+.scenariolab{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:9px;font-weight:700}
+.scenariocell.violet .scenariolab{color:var(--deepviolet)}
+.scenariocell.mainstream .scenariolab{color:var(--mainstream-hi)}
+.scenariosteps{font-size:12px;line-height:1.78;color:var(--tx2);font-family:var(--font-serif)}
+.scenariosteps ol{margin-left:16px;padding:0}
+.scenariosteps li{margin-bottom:4px;padding-left:3px}
+.scenariosteps li::marker{color:var(--tx3);font-family:var(--font-mono);font-size:11px}
+.scenariosteps strong{color:var(--a1);font-weight:500;font-style:normal}
+.scenariosteps em{color:var(--tx);font-style:italic}
+.scenarionote{padding:13px 22px;border-top:1px dashed var(--border-hi);font-size:12px;color:var(--tx);font-family:var(--font-cn);line-height:1.78;background:rgba(0,0,0,.18)}
+.scenarionote strong{color:var(--rootcolor);font-weight:500}
+.scenarionote em{color:var(--a1);font-style:normal}
+
+/* ==================== QUADRANT MAP ==================== */
+.quadmap{margin:20px 0;padding:26px 22px;background:var(--bg2);border:1px solid var(--border-hi);position:relative}
+.quadmap-hd{font-family:var(--font-mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--a3);margin-bottom:18px;text-align:center;font-weight:700}
+.quad-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative}
+.quad-cell{padding:16px 18px;border:1px solid var(--border);background:rgba(255,255,255,.018);min-height:120px}
+.quad-cell.violet{border-color:rgba(155,142,255,.42);background:linear-gradient(135deg,rgba(155,142,255,.06),rgba(0,0,0,.2))}
+.quad-cell.mainstream{border-color:rgba(184,184,196,.34);background:linear-gradient(135deg,rgba(184,184,196,.05),rgba(0,0,0,.2))}
+.quad-cell.shared{border-color:rgba(212,165,116,.4);background:linear-gradient(135deg,rgba(212,165,116,.06),rgba(0,0,0,.2))}
+.quad-axis-x{position:absolute;bottom:-30px;left:0;width:100%;text-align:center;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--tx3)}
+.quad-axis-y{position:absolute;top:50%;left:-10px;transform:translate(-100%,-50%) rotate(-90deg);transform-origin:right center;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--tx3);white-space:nowrap}
+.quad-lbl{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:7px;font-weight:700}
+.quad-cell.violet .quad-lbl{color:var(--deepviolet)}
+.quad-cell.mainstream .quad-lbl{color:var(--mainstream-hi)}
+.quad-cell.neither .quad-lbl{color:var(--tx3)}
+.quad-cell.shared .quad-lbl{color:var(--rootcolor)}
+.quad-content{font-size:12px;color:var(--tx2);line-height:1.7}
+.quad-content strong{color:var(--a1)}
+
 /* === CLOSING === */
 .closingblock{margin:36px 0 0;padding:30px 30px;background:var(--bg2);border:1px solid var(--border-hi);border-top:3px solid var(--deepviolet);position:relative}
 .closingblock::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--mathgold)}
@@ -238,6 +344,8 @@ a{color:inherit}
 .sblinks li{border-bottom:1px solid var(--border);padding:5px 0}
 .sblinks a{font-size:12px;color:var(--tx2);text-decoration:none;display:flex;justify-content:space-between;align-items:center;transition:color .15s}
 .sblinks a:hover{color:var(--a1)}
+.sblinks a.featured{color:var(--rootcolor);font-weight:500}
+.sblinks a.featured:hover{color:var(--a1)}
 .ar{font-size:9px;opacity:.35}
 .coord{font-family:var(--font-mono);font-size:10px;color:var(--tx3);line-height:2;letter-spacing:.04em}
 .coord span{color:var(--deepviolet)}
@@ -270,9 +378,9 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
   .ledger-row{grid-template-columns:1fr}
   .ledger-cell{border-right:none;border-bottom:1px solid var(--border)}
   .ledger-cell:last-child{border-bottom:none}
+  .vstable td:first-child{width:auto}
 }
 
-/* 改进的可访问性焦点样式 */
 :focus-visible{outline:2px solid var(--deepviolet);outline-offset:2px}
 </style>
 </head>
@@ -313,6 +421,7 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
 <nav class="pnav" aria-label="页面导航"><div class="pni">
   <a href="#overview" class="on">Overview</a>
   <a href="#dual">Dual Direction</a>
+  <a href="#vs-mainstream">vs Mainstream</a>
   <a href="#genesis">Genesis</a>
   <a href="#signature">Signature</a>
   <a href="#boundary">Boundary</a>
@@ -387,6 +496,257 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
 
   <div class="callout">
     <strong>Both directions are necessary.</strong> Only same-form → false unifications (categorically collapsed nonsense). Only different-nature → no structural insight (endless separation without theory). <em class="gold">The two directions in alternation = mathematics.</em>
+  </div>
+</article>
+
+<!-- ========== VS MAINSTREAM (NEW SECTION) ========== -->
+<article class="entry" id="vs-mainstream">
+  <div class="etop"><span class="badge mainstream">vs Mainstream</span><span class="edate">two implementations · same root</span></div>
+  <div class="etitle">本数学 vs 主流数学<span class="sub">Two Implementations of Mathematics · Same Root, Different Manifestations</span></div>
+
+  <p class="edesc">A frequent question: <em>"How does this Mathematics differ from mainstream mathematics?"</em> The answer at the highest level is <strong>"same root, different emphasis"</strong>. Both implementations descend from the same inductive recognition act; they differ in what each foregrounds.</p>
+  <p class="edesc zh">常见问题:<em>"本数学和主流数学的区别在哪里?"</em>最高层的答案是<strong>"同根, 不同强调"</strong>。两种实现都源于同一归纳识别动作;它们差异在于各自前景化的内容。</p>
+
+  <div class="vsbox">
+    <div class="vshd">— Core Position Lock · 核心立场锁 —</div>
+
+    <div class="vslock">
+      <em class="mainstream">主流数学</em> 也是数学。<em class="violet">本数学</em> 也是数学。<br>
+      两者都是<em class="root">同一识别动作</em>的不同实现形态 — 不是对立, 是不同强调。
+    </div>
+
+    <table class="vstable">
+      <thead>
+        <tr>
+          <th>Dimension · 维度</th>
+          <th class="violet">本数学 V0.2</th>
+          <th class="mainstream">主流数学</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1. Root · 根</td>
+          <td class="violet-side"><strong>归纳</strong> named as root action. Same-form + different-nature recognition foregrounded. <em class="violet">Deduction is formalized output</em>.</td>
+          <td class="mainstream-side"><strong>演绎</strong> typically presented as foundation: axioms + inference rules + proofs. Induction acknowledged in pedagogy but rarely named as ground.</td>
+        </tr>
+        <tr>
+          <td>2. Object · 对象</td>
+          <td class="violet-side">A <strong>method</strong> — recognition act itself. Mathematics is what one <em>does</em>.</td>
+          <td class="mainstream-side">A <strong>body of knowledge</strong> — structures, theorems, objects. Mathematics is what one <em>knows</em>.</td>
+        </tr>
+        <tr>
+          <td>3. Hume · 休谟</td>
+          <td class="violet-side"><em class="violet">Reconstructed</em> — denies "induction must be justified by deduction" premise. M-1 + M-Ω.</td>
+          <td class="mainstream-side"><em class="mainstream">Open problem</em> — Carnap, Popper, Bayesian responses, Goodman's new riddle still live.</td>
+        </tr>
+        <tr>
+          <td>4. Education · 教育</td>
+          <td class="violet-side"><strong>Recognition scaffolding</strong>: train same-form / different-nature before rule execution.</td>
+          <td class="mainstream-side">Diverse: procedural rigor, structured curricula, problem-set practice, proof-technique drills.</td>
+        </tr>
+        <tr>
+          <td>5. Self-Position · 自位</td>
+          <td class="violet-side"><strong>Self-closed</strong> (M-Ω): no "outside induction" position exists.</td>
+          <td class="mainstream-side"><strong>Open to external grounding</strong>: foundationalist debates remain live.</td>
+        </tr>
+        <tr>
+          <td>6. Axiom Count · 公理数</td>
+          <td class="violet-side"><strong>4 axioms</strong> (M-0, M-1, M-2, M-Ω). 4 → 2 → 1 descending signature.</td>
+          <td class="mainstream-side"><strong>Many systems</strong>: ZF, ZFC, Peano, Robinson Q, ETCS, HoTT. No "the axioms."</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="audittext"><em>On every dimension, both versions are doing mathematics</em>. The differences are in <strong>which aspect is foregrounded</strong>, not in whether the activity counts as mathematics. A mainstream mathematician doing category-theoretic work and a V0.2 practitioner doing recognition-act analysis are <em>collaborating on the same underlying ground</em>, often without realizing it.</p>
+  </div>
+
+  <!-- === Shared Root Flow Diagram === -->
+  <h3 style="font-family:var(--font-serif);font-size:20px;font-weight:500;color:var(--hd);margin:32px 0 10px;letter-spacing:.01em">Shared Root · 共同根<small style="display:block;font-size:13px;font-style:italic;font-weight:300;color:var(--tx2);margin-top:5px">两种实现共享同一归纳之根</small></h3>
+  <p class="edesc">Both implementations begin at the same place: the recognition act. <em class="violet">V0.2</em> names it as the foundation; <em class="mainstream">mainstream</em> lets formal output carry the work. Both descend from the same root.</p>
+
+  <div class="rootdiag">
+    <div class="rootdiag-hd">— Shared Inductive Root · 共同归纳之根 —</div>
+    <div class="rootdiag-flow">
+      <div class="rootdiag-node root">归纳 · Induction<span class="en">recognition of same-form and different-nature</span></div>
+      <div class="rootdiag-arrow">↓ formalized as ↓</div>
+      <div class="rootdiag-node">Recognition crystallizes into formal structure<span class="en">categories · isomorphisms · axioms · proofs</span></div>
+      <div class="rootdiag-arrow">↓ different presentations ↓</div>
+      <div class="rootdiag-split">
+        <div class="rootdiag-node violet">本数学 V0.2<span class="en">root named explicitly</span></div>
+        <div class="rootdiag-node mainstream">主流数学<span class="en">root left implicit</span></div>
+      </div>
+    </div>
+    <p class="rootdiag-caption"><em>Both branches descend from the same root</em>. Difference at presentation: V0.2 names the inductive root via M-0/M-1/M-2/M-Ω; mainstream lets formal output (axioms, proofs, theorems) carry the work.</p>
+  </div>
+
+  <!-- === Side by Side Cards === -->
+  <h3 style="font-family:var(--font-serif);font-size:20px;font-weight:500;color:var(--hd);margin:32px 0 10px;letter-spacing:.01em">Side by Side · 并列卡片<small style="display:block;font-size:13px;font-style:italic;font-weight:300;color:var(--tx2);margin-top:5px">两张牌 · 一张实现一张</small></h3>
+  <p class="edesc">Two cards, one for each implementation. Read them side by side. Neither is the "true" mathematics; both are mathematics presenting itself from a different angle.</p>
+
+  <div class="dualcard">
+    <div class="dcard violet">
+      <div class="dcard-head">
+        <div class="dcard-label">Implementation A · xingyeLing7Ai V0.2</div>
+        <div class="dcard-title">本数学<span class="cn">Mathematics (root-explicit version)</span></div>
+      </div>
+      <div class="dcard-body">
+        <p><strong>Foundational claim</strong>: Mathematics is a method of recognizing same-form and different-nature. Its formalized product manifests as deduction.</p>
+        <p><strong>What is emphasized</strong>:</p>
+        <ul>
+          <li>The recognition act before formalization</li>
+          <li>Induction as the structural root</li>
+          <li>Deduction as inductive residue, not independent foundation</li>
+          <li>Hume's induction problem reframed, not solved</li>
+          <li>Self-closure: no outside to induction (M-Ω)</li>
+        </ul>
+        <p><strong>What is left for the sister implementation</strong>: the formal codification of mathematical objects, the technical proofs, the specific axiom systems, the accumulated 2500-year corpus.</p>
+        <p><em>Where this version shines</em>: explaining what is happening at the recognition level when someone "gets" a piece of mathematics; designing curricula that train recognition before rule execution; locating mathematics in the broader xingyeLing7Ai discipline ecology.</p>
+      </div>
+    </div>
+
+    <div class="dcard mainstream">
+      <div class="dcard-head">
+        <div class="dcard-label">Implementation B · Mainstream Tradition</div>
+        <div class="dcard-title">主流数学<span class="cn">Mainstream Mathematics (output-explicit version)</span></div>
+      </div>
+      <div class="dcard-body">
+        <p><strong>Foundational claim</strong>: Mathematics studies abstract structures and their relations, typically via axioms, definitions, theorems, and proofs.</p>
+        <p><strong>What is emphasized</strong>:</p>
+        <ul>
+          <li>The formal codification of mathematical objects</li>
+          <li>Rigor of proof, soundness of inference</li>
+          <li>Building cumulative theory from definitions and axioms</li>
+          <li>Specifying which deductive structures are admissible</li>
+          <li>The 2500-year accumulated corpus of results</li>
+        </ul>
+        <p><strong>What is left implicit</strong>: the recognition act that precedes formalization; the inductive moment in which a mathematician sees that two structures are "the same" or "different"; the meta-question of what makes any axiom system worth choosing.</p>
+        <p><em>Where this version shines</em>: producing transmissible theorems and proofs; building shared infrastructure across thousands of mathematicians; specifying precisely what counts as a valid result in a given foundational system.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Concrete Example (∫ sin²(x) dx) === -->
+  <h3 style="font-family:var(--font-serif);font-size:20px;font-weight:500;color:var(--hd);margin:32px 0 10px;letter-spacing:.01em">Concrete Example · 具体例子<small style="display:block;font-size:13px;font-style:italic;font-weight:300;color:var(--tx2);margin-top:5px">一个学生看到 ∫ sin²(x) dx · two implementations in action</small></h3>
+  <p class="edesc">To show that the two implementations are <em>doing the same thing differently</em>, follow a single student encountering a single problem. Both implementations produce the correct answer. The internal experience and pedagogical scaffolding differ.</p>
+
+  <div class="scenariobox">
+    <div class="scenariohd">— Problem: <em>compute</em> ∫ sin²(x) dx · 同一个题目, 两种看见的方式 —</div>
+    <div class="scenariosplit">
+      <div class="scenariocell violet">
+        <div class="scenariolab">本数学 V0.2 · root-explicit path</div>
+        <div class="scenariosteps">
+          <ol>
+            <li><strong>Same-form recognition</strong>: <em>this is in the family</em> ∫ f²(x) dx <em>for periodic f</em>.</li>
+            <li><strong>Different-nature recognition</strong>: <em>no extra coefficients; this is the basic form, not a transformed variant</em>.</li>
+            <li><strong>Pattern identification</strong>: <em>for</em> ∫ f²(x) dx <em>with periodic f, the strategy is power-reduction</em>.</li>
+            <li><strong>Apply half-angle identity</strong>: sin²(x) = (1 - cos(2x))/2.</li>
+            <li><strong>Execute deductive integration</strong>: x/2 - sin(2x)/4 + C.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="scenariocell mainstream">
+        <div class="scenariolab">主流数学 · output-explicit path</div>
+        <div class="scenariosteps">
+          <ol>
+            <li><strong>Recognize the integrand</strong>: "sin²(x) — I've learned the half-angle identity for this."</li>
+            <li><strong>Recall the formula</strong>: sin²(x) = (1 - cos(2x))/2.</li>
+            <li><strong>Apply the substitution</strong>: ∫ (1 - cos(2x))/2 dx.</li>
+            <li><strong>Execute deductive integration</strong>: x/2 - sin(2x)/4 + C.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="scenarionote">
+      <strong>Both reach the same answer.</strong> The mainstream path is shorter on paper, but compresses the recognition acts (steps 1-2 of the V0.2 path) into a single tacit move. <em>The recognition acts happen in both</em> — V0.2 just names them as separate steps that can be trained, evaluated, and scaffolded. When the student next encounters ∫ sin⁴(x) dx, the V0.2-trained student recognizes the same-form-extension to ∫ f²ⁿ(x); the mainstream-trained student may or may not — depending on whether the recognition act was implicitly practiced enough times.
+    </div>
+  </div>
+
+  <!-- === Four Quadrants Map === -->
+  <h3 style="font-family:var(--font-serif);font-size:20px;font-weight:500;color:var(--hd);margin:32px 0 10px;letter-spacing:.01em">Four Quadrants · 四象限图<small style="display:block;font-size:13px;font-style:italic;font-weight:300;color:var(--tx2);margin-top:5px">识别 × 形式化 · two-axis mode map</small></h3>
+  <p class="edesc">A two-axis map. Vertical: <strong>recognition explicit ↔ implicit</strong>. Horizontal: <strong>formalization explicit ↔ implicit</strong>. Each quadrant locates a different mode of doing mathematics.</p>
+
+  <div class="quadmap">
+    <div class="quadmap-hd">— Two-Axis Mode Map · 两轴模式图 —</div>
+    <div style="position:relative;padding:36px 14px 50px 32px">
+      <div class="quad-grid">
+        <div class="quad-cell violet">
+          <div class="quad-lbl">↖ recognition-only</div>
+          <div class="quad-content"><strong>V0.2 reading alone</strong> — recognition act named, formalization light. Useful for philosophy of mathematics, pedagogy theory, locating mathematics in broader cognition. <em>Risk if alone</em>: no theorems produced; corpus does not grow.</div>
+        </div>
+        <div class="quad-cell shared">
+          <div class="quad-lbl">↗ full integration</div>
+          <div class="quad-content"><strong>Both implementations together</strong> — recognition is named, formalization is rigorous. This is what fully realized mathematics looks like when both V0.2 and mainstream are present. <em>This is the ideal practice</em>.</div>
+        </div>
+        <div class="quad-cell neither">
+          <div class="quad-lbl">↙ neither</div>
+          <div class="quad-content">Pre-mathematical thinking — neither the recognition act nor the formalization is explicit. This is the everyday state from which mathematics emerges, both historically and developmentally.</div>
+        </div>
+        <div class="quad-cell mainstream">
+          <div class="quad-lbl">↘ formalization-only</div>
+          <div class="quad-content"><strong>Mainstream reading alone</strong> — formalization is rigorous, recognition act left tacit. This is most contemporary mathematics. <em>Risk if alone</em>: rule-execution without meta-awareness; "math difficulty" appears in students who haven't trained recognition.</div>
+        </div>
+      </div>
+      <div class="quad-axis-x">formalization implicit ←———————————————→ formalization explicit</div>
+      <div class="quad-axis-y">recognition implicit ←———→ recognition explicit</div>
+    </div>
+  </div>
+  <p class="edesc" style="margin-top:42px"><em class="violet">The upper-right quadrant</em> — recognition named <em>and</em> formalization rigorous — is the integration goal. V0.2 alone tends to drift toward upper-left; mainstream alone tends to drift toward lower-right. <strong>Neither side is wrong; either side <em>alone</em> is partial</strong>.</p>
+
+  <!-- === What Changes in Practice === -->
+  <h3 style="font-family:var(--font-serif);font-size:20px;font-weight:500;color:var(--hd);margin:32px 0 10px;letter-spacing:.01em">What Changes in Practice · 实际改变什么<small style="display:block;font-size:13px;font-style:italic;font-weight:300;color:var(--tx2);margin-top:5px">concrete differences in how mathematics gets done</small></h3>
+  <p class="edesc">If V0.2 is taken seriously alongside mainstream mathematics, certain practical things change. Below are concrete shifts — not abstract claims, but observable changes in how mathematics could be taught, written, and explored.</p>
+
+  <table class="vstable">
+    <thead>
+      <tr>
+        <th>Domain · 领域</th>
+        <th class="violet">本数学 V0.2 introduces</th>
+        <th class="mainstream">主流数学 already provides</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Teaching · 教学</td>
+        <td class="violet-side">Recognition scaffolding: train same-form / different-nature recognition <em>before</em> formal rules. Diagnose math difficulty as recognition gap.</td>
+        <td class="mainstream-side">Procedural rigor: step-by-step proof technique, formal definitions, standard problem types. Library of pedagogical traditions.</td>
+      </tr>
+      <tr>
+        <td>Research · 研究</td>
+        <td class="violet-side">Philosophical layer naming what the recognition act <em>is</em>; potential meta-papers about mathematical cognition.</td>
+        <td class="mainstream-side">Production of theorems, proofs, conjectures, the accumulated technical infrastructure of all mathematical fields.</td>
+      </tr>
+      <tr>
+        <td>Philosophy · 哲学</td>
+        <td class="violet-side">Reconstructs Hume's induction problem by denying deduction-as-prior. M-Ω as closure axiom.</td>
+        <td class="mainstream-side">Full ecosystem of foundationalist / structuralist / fictionalist / naturalist positions, extensive literature.</td>
+      </tr>
+      <tr>
+        <td>AI / ML</td>
+        <td class="violet-side">Names what neural networks do at the recognition layer (same-form / different-nature pattern recognition).</td>
+        <td class="mainstream-side">Statistical learning theory, formal complexity bounds, optimization, proof assistants, formal verification.</td>
+      </tr>
+      <tr>
+        <td>Cross-discipline · 跨学科</td>
+        <td class="violet-side">Locates mathematics inside the xingyeLing7Ai 7-discipline ecology.</td>
+        <td class="mainstream-side">Mathematics as the lingua franca of physics, engineering, computer science, economics, statistics.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- === Final Closing Equation === -->
+  <div class="vsbox" style="margin-top:30px;background:linear-gradient(135deg,rgba(212,165,116,.07),rgba(0,0,0,.4))">
+    <div class="vshd" style="text-align:center">— Same Root · Different Manifestations · 同根异显 —</div>
+    <div class="equation" style="font-size:22px;color:var(--a1);margin:14px 0">
+      <em class="violet" style="color:var(--deepviolet);font-style:normal;font-weight:600">本数学</em> <span class="eq" style="color:var(--tx3)">+</span> <em class="mainstream" style="color:var(--mainstream-hi);font-style:normal;font-weight:600">主流数学</em> <span class="eq" style="color:var(--tx3)">=</span> 同一<em class="root" style="color:var(--rootcolor);font-style:normal;font-weight:600">归纳动作</em>的两种实现
+    </div>
+    <div class="equation en" style="text-align:center">
+      <em style="color:var(--deepviolet);font-style:italic">xingyeLing7Ai Mathematics V0.2</em> <span class="eq">+</span> <em style="color:var(--mainstream-hi);font-style:italic">Mainstream Mathematics</em> <span class="eq">=</span> Two Implementations of the Same <em style="color:var(--rootcolor);font-style:italic">Inductive Act</em>
+    </div>
+    <p style="font-family:var(--font-mono);font-size:11px;color:var(--tx3);text-align:center;margin-top:18px;letter-spacing:.06em;line-height:1.85">
+      <em style="color:var(--rootcolor);font-style:normal">Not opposition. Not "real vs fake." Different emphasis on the same fundamental structure.</em><br>
+      The recognition act is the shared root. <em style="color:var(--a1);font-style:normal">How it is named, scaffolded, or kept tacit is where the two implementations diverge</em>.<br>
+      <strong style="color:var(--mathgold);font-weight:500">Both are mathematics. Both belong.</strong>
+    </p>
   </div>
 </article>
 
@@ -469,7 +829,7 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
 
   <div class="auditbox neutral">
     <div class="auditlabel">与 Gödel 不完备及无穷公理的关系</div>
-    <p class="audittext"><strong>层次分离澄清：</strong> 本数学不声称无穷公理或 Gödel 不可判定命题可直接还原为归纳动作；它主张的是，接受这些公理或识别这些命题的数学行为本身属于归纳。Gödel 语句在形式系统内不可证明，但其元数学识别（“真但不可证”）是一个归纳飞跃。同样，无穷公理的接受不是有限归纳的逻辑结果，而是归纳动作在形式化边界上的“设定”。本体系将此视为归纳自我闭合的一部分，而非反例。</p>
+    <p class="audittext"><strong>层次分离澄清：</strong> 本数学不声称无穷公理或 Gödel 不可判定命题可直接还原为归纳动作；它主张的是，接受这些公理或识别这些命题的数学行为本身属于归纳。Gödel 语句在形式系统内不可证明，但其元数学识别（"真但不可证"）是一个归纳飞跃。同样，无穷公理的接受不是有限归纳的逻辑结果，而是归纳动作在形式化边界上的"设定"。本体系将此视为归纳自我闭合的一部分，而非反例。</p>
   </div>
 
   <div class="etags">
@@ -484,7 +844,7 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
 <article class="entry" id="v02-dictionary">
   <div class="etop"><span class="badge feat">V0.2</span><span class="edate">terminology lock · 定性守护</span></div>
   <div class="etitle">术语词典<span class="sub">Terminology Dictionary · direct citation form · no semantic drift</span></div>
-  <p class="edesc zh">以下定义用于 V0.2 对外传播、论文摘要、README 与网站导言。每条均以“可直接引用、不可滑义、不可误读”为标准。</p>
+  <p class="edesc zh">以下定义用于 V0.2 对外传播、论文摘要、README 与网站导言。每条均以"可直接引用、不可滑义、不可误读"为标准。</p>
   <table class="v02-table">
     <thead><tr><th>术语</th><th>定性定义</th></tr></thead>
     <tbody>
@@ -509,7 +869,7 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
 
   <div class="v02-panel">
     <div class="v02-title">A · 摘要版 / abstract version</div>
-    <p class="v02-text zh">「数学」V0.2以四公理立学：数学识别同型与异性；运算是归纳的演绎；范畴逻辑在识别层意义上是归纳逻辑；归纳既是原因也是结果。它重构 Hume 归纳问题：不以演绎证明归纳，而说明演绎已在归纳之内。它不反对主流数学，主流数学也是数学；二者是同一识别动作的不同实现。本数学与数学物理学 MP-0 为姐妹节点：MP-0处理“数—物—理—学”的字根结构，本数学显化其识别方法层。</p>
+    <p class="v02-text zh">「数学」V0.2以四公理立学：数学识别同型与异性；运算是归纳的演绎；范畴逻辑在识别层意义上是归纳逻辑；归纳既是原因也是结果。它重构 Hume 归纳问题：不以演绎证明归纳，而说明演绎已在归纳之内。它不反对主流数学，主流数学也是数学；二者是同一识别动作的不同实现。本数学与数学物理学 MP-0 为姐妹节点：MP-0处理"数—物—理—学"的字根结构，本数学显化其识别方法层。</p>
   </div>
 
   <div class="v02-quote">
@@ -532,7 +892,7 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
       <tr><td>哲学家</td><td>误读为另一种 anti-foundationalism 或反基础主义。</td><td>本数学不否定基础，而是把归纳识别定义为基础动作。</td></tr>
       <tr><td>心理学家</td><td>误读为认知偏差、模式识别或学习心理理论。</td><td>本数学不研究心理状态，而研究数学动作的结构来源。</td></tr>
       <tr><td>AI 研究者</td><td>误读为机器学习、表征学习或归纳偏置的新框架。</td><td>本数学不提出算法模型，而定义数学识别的本体层动作。</td></tr>
-      <tr><td>普通公众</td><td>误读为“数学不好的人的借口”。</td><td>本数学不降低严格性；它说明严格性从何处发生。</td></tr>
+      <tr><td>普通公众</td><td>误读为"数学不好的人的借口"。</td><td>本数学不降低严格性；它说明严格性从何处发生。</td></tr>
       <tr><td>数学教育者</td><td>误读为反对应试训练、计算训练或证明训练。</td><td>本数学不反对训练，而要求训练同型与异性的识别能力。</td></tr>
       <tr><td>主流数学的捍卫者</td><td>误读为攻击主流数学或挑衅数学传统。</td><td>主流数学也是数学；本版本是同根动作的显化版本。</td></tr>
     </tbody>
@@ -544,12 +904,12 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
   <div class="etitle">体系定位陈述<span class="sub">what it is · what it is not · where it speaks</span></div>
   <div class="auditbox neutral">
     <div class="auditlabel">System Position Lock · 体系定位锁</div>
-    <p class="audittext zh">「数学」V0.2不是反 ZFC，不是反范畴论，不是学习心理学，也不是“应试数学差”的解释方案。它是 xingyeLing7Ai 知识谱系中的方法层结构科学，用来显化数学作为同型与异性识别、归纳沉淀为演绎的根本动作。它可与数学哲学、范畴论基础、科学哲学、Hume 归纳问题对话；不与主流数学构成真假对立关系。</p>
+    <p class="audittext zh">「数学」V0.2不是反 ZFC，不是反范畴论，不是学习心理学，也不是"应试数学差"的解释方案。它是 xingyeLing7Ai 知识谱系中的方法层结构科学，用来显化数学作为同型与异性识别、归纳沉淀为演绎的根本动作。它可与数学哲学、范畴论基础、科学哲学、Hume 归纳问题对话；不与主流数学构成真假对立关系。</p>
   </div>
   <table class="v02-table">
     <thead><tr><th>定位项</th><th>锁定内容</th></tr></thead>
     <tbody>
-      <tr><td class="v02-bad">不是什么</td><td>不是反 ZFC；不是反范畴论；不是学习心理学；不是“数学不好”的解释方案。</td></tr>
+      <tr><td class="v02-bad">不是什么</td><td>不是反 ZFC；不是反范畴论；不是学习心理学；不是"数学不好"的解释方案。</td></tr>
       <tr><td class="v02-ok">是什么</td><td>xingyeLing7Ai 知识谱系中的方法层结构科学；显化数学的归纳根。</td></tr>
       <tr><td>可对话对象</td><td>数学哲学、范畴论基础、科学哲学、Hume 归纳问题。</td></tr>
       <tr><td>不构成对话关系</td><td>不与主流数学构成真假对立、优劣对立或替代关系。</td></tr>
@@ -752,6 +1112,7 @@ body.lang-zh .zh-only,body.lang-en .en-only,body.lang-bilingual .zh-only,body.la
   <div>
     <div class="sbl">Related Sites</div>
     <ul class="sblinks">
+      <li><a href="#vs-mainstream" class="featured">vs Mainstream · 对比节 <span class="ar">↓</span></a></li>
       <li><a href="https://mellowwei.github.io/MellowWei/" target="_blank" rel="noopener">MellowWei · Portal <span class="ar">→</span></a></li>
       <li><a href="https://mellowwei.github.io/MellowAcademic/" target="_blank" rel="noopener">MellowAcademic <span class="ar">→</span></a></li>
       <li><a href="https://mellowwei.github.io/SixDisciplines/" target="_blank" rel="noopener">Six-Discipline Meta-Doc <span class="ar">→</span></a></li>
@@ -809,7 +1170,7 @@ if(vp==='zh')setLang('zh');else if(vp==='en')setLang('en');else setLang('bilingu
 document.querySelectorAll('.ti a[data-lang]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();setLang(a.dataset.lang)}));
 
 const links=document.querySelectorAll('.pnav a');
-const sections=document.querySelectorAll('[id="overview"],[id="dual"],[id="genesis"],[id="signature"],[id="boundary"],[id="v02-dictionary"],[id="v02-compression"],[id="v02-antislide"],[id="v02-position"],[id="ecology"],[id="ledger"],[id="m0"],[id="m1"],[id="m2"],[id="momega"],[id="closing"]');
+const sections=document.querySelectorAll('[id="overview"],[id="dual"],[id="vs-mainstream"],[id="genesis"],[id="signature"],[id="boundary"],[id="v02-dictionary"],[id="v02-compression"],[id="v02-antislide"],[id="v02-position"],[id="ecology"],[id="ledger"],[id="m0"],[id="m1"],[id="m2"],[id="momega"],[id="closing"]');
 const obs=new IntersectionObserver(e=>{
   e.forEach(en=>{
     if(en.isIntersecting){
